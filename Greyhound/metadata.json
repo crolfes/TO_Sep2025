@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_greyhound_ihp",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "Greyhound",
+    "FinalGdsName": "FMD_QNC_greyhound_ihp.gds",
+    "TopCellName": "FMD_QNC_greyhound_ihp",
+    "Width": "3.600mm",
+    "Height": "5.000mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
