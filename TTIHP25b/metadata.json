@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_template_project",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "TTIHP25b",
+    "FinalGdsName": "FMD_QNC_TTIHP25b.gds",
+    "TopCellName": "FMD_QNC_TTIHP25b",
+    "Width": "5.400mm",
+    "Height": "6.450mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
