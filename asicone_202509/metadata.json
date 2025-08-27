@@ -6,8 +6,8 @@
     "DesignName": "asicone_202509",
     "FinalGdsName": "asicone_202509.gds",
     "TopCellName": "asicone_202509",
-    "Width": "1.4140mm",
-    "Height": "1.4140mm",
+    "Width": "1.43260mm",
+    "Height": "1.39606mm",
     "NumberOfSamples": "10"
   },
   "FinalWaferThickness": "200um"
