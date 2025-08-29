@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_Lumos",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "FMD_QNC_Lumos",
+    "FinalGdsName": "FMD_QNC_Lumos.gds",
+    "TopCellName": "FMD_QNC_Lumos",
+    "Width": "1.112mm",
+    "Height": "1.032mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
