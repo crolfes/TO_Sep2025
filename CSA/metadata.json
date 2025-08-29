@@ -3,12 +3,12 @@
   "Shuttle": "MPW 0.13µm Sep 2025(T594)",
   "Technology": "SG13CMOS",
   "Design": {
-    "DesignName": "CSA_design",
+    "DesignName": "CSA",
     "FinalGdsName": "CSA.gds",
     "TopCellName": "top",
     "Width": "1.050mm",
     "Height": "1.850mm",
-    "NumberOfSamples": "10"
+    "NumberOfSamples": "20"
   },
   "FinalWaferThickness": "200um"
 }
