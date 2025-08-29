@@ -1,8 +1,8 @@
 {
   "name": "Tiny Tapeout IHP 25b",
   "repo": "https://github.com/TinyTapeout/tinytapeout-ihp-25b",
-  "commit": "d7cfd51b601c48febba905115e37ccf851156755",
-  "commit_date": 1756055232,
+  "commit": "e6b9cb748ec512fd472f756b4bb4604d5d842de6",
+  "commit_date": 1756469479,
   "layout": {
     "muxes": [
       [
@@ -66,7 +66,7 @@
       "y": 1,
       "tiles": "5x4",
       "repo": "https://github.com/MichaelBell/ttihp25b-tinyQV",
-      "commit": "be196a60930594f39e5de853423875d956a585f7"
+      "commit": "de96f4de50350cb8c570616f7b22862f0f32f4fc"
     },
     {
       "macro": "tt_um_rte_eink_driver",
@@ -119,8 +119,8 @@
       "x": 3,
       "y": 0,
       "tiles": "1x1",
-      "repo": "https://github.com/Larj975/Tiny-Tapeout-Workshop",
-      "commit": "f20687140bbc46ddc9a6a6185c0146b54785e034"
+      "repo": "https://github.com/Larj975/Tiny-Tapeout-Workshop_Design_B",
+      "commit": "c0de955946c859604833fc26f07625516ed92aa3"
     },
     {
       "macro": "tt_um_wokwi_434917320361309185",
@@ -336,7 +336,7 @@
       "y": 14,
       "tiles": "1x1",
       "repo": "https://github.com/StPhobic/TinyTapeOutSwissChips",
-      "commit": "d5d010e69f97bc08228a511967fd1703c730e6d8"
+      "commit": "94659c772fa7e55ec4be03545492d7986124c11d"
     },
     {
       "macro": "tt_um_wokwi_434917139713644545",
@@ -398,8 +398,8 @@
       "x": 2,
       "y": 7,
       "tiles": "1x1",
-      "repo": "https://github.com/nikhil-garg/tiny_tapeout",
-      "commit": "26e71d050bf14d4bec0208399ceb9fa8f1c341b9"
+      "repo": "https://github.com/nikhil-garg/tiny_tapeout_NG",
+      "commit": "b368551a0b38b2a25953094c0ab0a4ddb2560897"
     },
     {
       "macro": "tt_um_wokwi_434917760986646529",
@@ -553,6 +553,60 @@
       "tiles": "1x1",
       "repo": "https://github.com/anujic/tt_project",
       "commit": "39b3c7a6f5581b2f2cbc231ed2bac2000f27424a"
+    },
+    {
+      "macro": "tt_um_rodald_cpr",
+      "address": 521,
+      "x": 5,
+      "y": 4,
+      "tiles": "1x2",
+      "repo": "https://github.com/Rodald/ttihp25b-8bit-cpu-crp",
+      "commit": "55e4b727b8a448ed0b11ca907495faa8fdc71c27"
+    },
+    {
+      "macro": "tt_um_alif_dual_unileak",
+      "address": 466,
+      "x": 19,
+      "y": 7,
+      "tiles": "1x1",
+      "repo": "https://github.com/abaigol/lif_neuron_Alex",
+      "commit": "affc788c6c904952287d13690f733b2ba61907aa"
+    },
+    {
+      "macro": "tt_um_blptrk_weaving01",
+      "address": 435,
+      "x": 0,
+      "y": 21,
+      "tiles": "1x1",
+      "repo": "https://github.com/bleeptrack/weaving01",
+      "commit": "669612bc5963292d97d7234fd103d3b8a5b14df4"
+    },
+    {
+      "macro": "tt_um_riscv_mini_ihp",
+      "address": 433,
+      "x": 1,
+      "y": 21,
+      "tiles": "1x1",
+      "repo": "https://github.com/thuehlinger/tt-ihp25b-riscv-mini",
+      "commit": "07742048fc43d60b78e7a942a39aebd85a5c10e5"
+    },
+    {
+      "macro": "tt_um_wokwi_434917200607612929",
+      "address": 431,
+      "x": 2,
+      "y": 21,
+      "tiles": "1x1",
+      "repo": "https://github.com/Marc-Rautmann/tinytapeout_marc_Design_C",
+      "commit": "44ce6cfc9ca404155b8f5b070d2f917371e3cd08"
+    },
+    {
+      "macro": "tt_um_oscillating_bones",
+      "address": 519,
+      "x": 6,
+      "y": 4,
+      "tiles": "1x2",
+      "repo": "https://github.com/urish/ttihp-oscillating-bones",
+      "commit": "79c273d3857e0fb494cbf929dbb88c02ae227489"
     }
   ]
 }
