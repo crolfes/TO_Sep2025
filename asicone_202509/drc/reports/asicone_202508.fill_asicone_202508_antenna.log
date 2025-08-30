@@ -1,0 +1,7 @@
+# Logfile created on 2025-08-28 21:26:03 +0900 by logger.rb/v1.5.3
+2025-08-28 21:26:03 +0900: Memory Usage (492628K) : Starting running IHP-SG13G2 Klayout DRC Antenna runset on /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/outputs/asicone_202508.fill.gds
+2025-08-28 21:26:03 +0900: Memory Usage (492628K) : Ruby Version for klayout: 3.2.3
+2025-08-28 21:26:04 +0900: Memory Usage (539680K) : Loading database to memory is complete.
+2025-08-28 21:26:04 +0900: Memory Usage (539680K) : IHP-SG13G2 Klayout DRC Antenna runset output at: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports/asicone_202508.fill_asicone_202508_antenna.lyrdb
+2025-08-28 21:26:04 +0900: Memory Usage (539680K) : Evaluate switches.
+2025-08-28 21:26:04 +0900: Memory Usage (539680K) : flat mode is enabled for antenna table.
