@@ -6,8 +6,8 @@
     "DesignName": "TTIHP25b",
     "FinalGdsName": "FMD_QNC_TTIHP25b.gds",
     "TopCellName": "FMD_QNC_TTIHP25b",
-    "Width": "5.400mm",
-    "Height": "6.450mm",
+    "Width": "3.600mm",
+    "Height": "5.000mm",
     "NumberOfSamples": "10"
   },
   "FinalWaferThickness": "200um"
