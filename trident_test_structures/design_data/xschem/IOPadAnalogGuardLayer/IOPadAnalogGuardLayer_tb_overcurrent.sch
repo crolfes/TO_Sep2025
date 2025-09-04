@@ -29,7 +29,7 @@ value=1.2}
 C {lab_pin.sym} -920 -50 0 0 {name=p1 sig_type=std_logic lab=vdd
 value=1.2}
 C {lab_pin.sym} -200 -80 0 0 {name=p2 sig_type=std_logic lab=vdd}
-C {simulator_commands_shown.sym} -940 -230 0 0 {
+C {simulator_commands_shown.sym} -1000 -220 0 0 {
 name=Libs_Ngspice
 simulator=ngspice
 only_toplevel=false
@@ -40,7 +40,7 @@ value="
 .lib cornerRES.lib res_typ
 "
       }
-C {simulator_commands_shown.sym} -1010 120 0 0 {name=SimulatorNGSPICE
+C {simulator_commands_shown.sym} -1000 130 0 0 {name=SimulatorNGSPICE
 simulator=ngspice
 only_toplevel=false 
 value="
@@ -89,11 +89,12 @@ write_data [save_params] $netlist_dir/[file rootname [file tail [xschem get curr
 xschem netlist
 simulate
 "}
-C {devices/code_shown.sym} -970 -340 0 0 {name=MODEL only_toplevel=true
+C {devices/code_shown.sym} -1000 -350 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::SG13G2_MODELS/diodes.lib
 .include $::SG13G2_MODELS/sg13g2_esd.lib
+.include ../../idiodes/sg13g2_esd_idiodes.lib
 "}
 C {capa.sym} 120 30 0 0 {name=C1
 m=1

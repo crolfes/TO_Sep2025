@@ -50,13 +50,13 @@ model=diodevdd_4kv
 m=2
 spiceprefix=X
 }
-C {sg13g2_pr/idiodevss_4kv.sym} 0 60 0 0 {name=D4
-model=idiodevss_4kv
-spiceprefix=X
-m=2
-}
 C {sg13g2_pr/diodevss_4kv.sym} 0 180 0 0 {name=D1
 model=diodevss_4kv
 spiceprefix=X
 m=2
+}
+C {/run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/idiodes/idiodevss_4kv.sym} 0 60 0 0 {name=D2
+model=idiodevss_4kv
+spiceprefix=X
+m=1
 }
