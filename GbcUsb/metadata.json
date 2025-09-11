@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_GbcUsb",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "FMD_QNC_GbcUsb",
+    "FinalGdsName": "FMD_QNC_GbcUsb.gds.gz",
+    "TopCellName": "FMD_QNC_GbcUsbPads",
+    "Width": "1.414mm",
+    "Height": "1.414mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
