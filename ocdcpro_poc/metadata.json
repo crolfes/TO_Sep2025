@@ -6,8 +6,8 @@
     "DesignName": "FMD_QNC_ocdcpro_poc",
     "FinalGdsName": "FMD_QNC_ocdcpro_poc.gds",
     "TopCellName": "FMD_QNC_ocdcpro_poc",
-    "Width": "1.400mm",
-    "Height": "1.400mm",
+    "Width": "2.700mm",
+    "Height": "2.700mm",
     "NumberOfSamples": "10"
   },
   "FinalWaferThickness": "200um"
