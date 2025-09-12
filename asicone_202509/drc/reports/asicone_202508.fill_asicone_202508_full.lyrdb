@@ -122,48 +122,6 @@
    </categories>
   </category>
  <category>
-   <name>Slt.e1_M1</name>
-   <description>7.3. Slt.e1_M1 : No M1:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_M2</name>
-   <description>7.3. Slt.e1_M2 : No M2:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_M3</name>
-   <description>7.3. Slt.e1_M3 : No M3:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_M4</name>
-   <description>7.3. Slt.e1_M4 : No M4:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_M5</name>
-   <description>7.3. Slt.e1_M5 : No M5:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_TM1</name>
-   <description>7.3. Slt.e1_TM1 : No TM1:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>Slt.e1_TM2</name>
-   <description>7.3. Slt.e1_TM2 : No TM2:slit required on MIM</description>
-   <categories>
-   </categories>
-  </category>
- <category>
    <name>Pad.m</name>
    <description>6.9. Pad.m : SBumpPad and CuPillarPad in same layout not allowed</description>
    <categories>
@@ -214,6 +172,48 @@
   <category>
    <name>Pad.i</name>
    <description>6.9. Pad.i : dfpad without TopMetal2 not allowed</description>
+   <categories>
+   </categories>
+  </category>
+ <category>
+   <name>Slt.e1_M1</name>
+   <description>7.3. Slt.e1_M1 : No M1:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_M2</name>
+   <description>7.3. Slt.e1_M2 : No M2:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_M3</name>
+   <description>7.3. Slt.e1_M3 : No M3:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_M4</name>
+   <description>7.3. Slt.e1_M4 : No M4:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_M5</name>
+   <description>7.3. Slt.e1_M5 : No M5:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_TM1</name>
+   <description>7.3. Slt.e1_TM1 : No TM1:slit required on MIM</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>Slt.e1_TM2</name>
+   <description>7.3. Slt.e1_TM2 : No TM2:slit required on MIM</description>
    <categories>
    </categories>
   </category>
@@ -350,18 +350,6 @@
    </categories>
   </category>
  <category>
-   <name>CntB.b1</name>
-   <description>5.15. CntB.b1 Min. ContBar space with common run &gt; 5.0 µm is 0.36 um</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>CntB.h1</name>
-   <description>5.15. CntB.h1 Min. Metal1 enclosure of ContBar is 0.05 um</description>
-   <categories>
-   </categories>
-  </category>
- <category>
    <name>Sdiod.d</name>
    <description>6.7. Sdiod.d : Min. and max. ContBar width inside nBuLay is 0.3 um</description>
    <categories>
@@ -370,6 +358,18 @@
   <category>
    <name>Sdiod.e</name>
    <description>6.7. Sdiod.e : Min. and max. ContBar length inside nBuLay is 1.0 um</description>
+   <categories>
+   </categories>
+  </category>
+ <category>
+   <name>CntB.b1</name>
+   <description>5.15. CntB.b1 Min. ContBar space with common run &gt; 5.0 µm is 0.36 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CntB.h1</name>
+   <description>5.15. CntB.h1 Min. Metal1 enclosure of ContBar is 0.05 um</description>
    <categories>
    </categories>
   </category>
@@ -519,6 +519,18 @@
    </categories>
   </category>
  <category>
+   <name>MIM.c</name>
+   <description>6.11. MIM.c : Min. Metal5 enclosure of MIM is 0.6 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>MIM.d</name>
+   <description>6.11. MIM.d : Min. MIM enclosure of TopVia1 is 0.36 um</description>
+   <categories>
+   </categories>
+  </category>
+ <category>
    <name>TM1.a</name>
    <description>5.22. TM1.a: Min. TopMetal1 width: 1.64 μm.</description>
    <categories>
@@ -557,18 +569,6 @@
   <category>
    <name>AFil.j</name>
    <description>5.6. AFil.j Min. nSD:block and SalBlock enclosure of Activ:filler inside PWell:block is 0.25 um</description>
-   <categories>
-   </categories>
-  </category>
- <category>
-   <name>MIM.c</name>
-   <description>6.11. MIM.c : Min. Metal5 enclosure of MIM is 0.6 um</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>MIM.d</name>
-   <description>6.11. MIM.d : Min. MIM enclosure of TopVia1 is 0.36 um</description>
    <categories>
    </categories>
   </category>
@@ -3460,102 +3460,6 @@
    <comment />
    <image />
    <values>
-    <value>polygon: (67.82,614.265;67.82,614.625;67.98,614.625;67.98,614.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,614.265;81.28,614.625;81.44,614.625;81.44,614.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,694.265;67.82,694.625;67.98,694.625;67.98,694.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,694.265;81.28,694.625;81.44,694.625;81.44,694.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,774.265;67.82,774.625;67.98,774.625;67.98,774.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,774.265;81.28,774.625;81.44,774.625;81.44,774.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,854.265;67.82,854.625;67.98,854.625;67.98,854.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,854.265;81.28,854.625;81.44,854.625;81.44,854.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
     <value>polygon: (193.265,1040.56;193.265,1040.72;193.625,1040.72;193.625,1040.56)</value>
    </values>
   </item>
@@ -3652,30 +3556,6 @@
    <comment />
    <image />
    <values>
-    <value>polygon: (833.265,1040.56;833.265,1040.72;833.625,1040.72;833.625,1040.56)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (913.265,1040.56;913.265,1040.72;913.625,1040.72;913.625,1040.56)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
     <value>polygon: (193.265,1054.02;193.265,1054.18;193.625,1054.18;193.625,1054.02)</value>
    </values>
   </item>
@@ -3761,30 +3641,6 @@
    <image />
    <values>
     <value>polygon: (753.265,1054.02;753.265,1054.18;753.625,1054.18;753.625,1054.02)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (833.265,1054.02;833.265,1054.18;833.625,1054.18;833.625,1054.02)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.d'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (913.265,1054.02;913.265,1054.18;913.625,1054.18;913.625,1054.02)</value>
    </values>
   </item>
   <item>
@@ -3916,102 +3772,6 @@
    <comment />
    <image />
    <values>
-    <value>polygon: (67.82,614.265;67.82,614.625;67.98,614.625;67.98,614.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,614.265;81.28,614.625;81.44,614.625;81.44,614.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,694.265;67.82,694.625;67.98,694.625;67.98,694.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,694.265;81.28,694.625;81.44,694.625;81.44,694.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,774.265;67.82,774.625;67.98,774.625;67.98,774.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,774.265;81.28,774.625;81.44,774.625;81.44,774.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (67.82,854.265;67.82,854.625;67.98,854.625;67.98,854.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (81.28,854.265;81.28,854.625;81.44,854.625;81.44,854.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
     <value>polygon: (193.265,1040.56;193.265,1040.72;193.625,1040.72;193.625,1040.56)</value>
    </values>
   </item>
@@ -4108,30 +3868,6 @@
    <comment />
    <image />
    <values>
-    <value>polygon: (833.265,1040.56;833.265,1040.72;833.625,1040.72;833.625,1040.56)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (913.265,1040.56;913.265,1040.72;913.625,1040.72;913.625,1040.56)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
     <value>polygon: (193.265,1054.02;193.265,1054.18;193.625,1054.18;193.625,1054.02)</value>
    </values>
   </item>
@@ -4217,30 +3953,6 @@
    <image />
    <values>
     <value>polygon: (753.265,1054.02;753.265,1054.18;753.625,1054.18;753.625,1054.02)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (833.265,1054.02;833.265,1054.18;833.625,1054.18;833.625,1054.02)</value>
-   </values>
-  </item>
-  <item>
-   <tags />
-   <category>'Sdiod.e'</category>
-   <cell>asicone_202508</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment />
-   <image />
-   <values>
-    <value>polygon: (913.265,1054.02;913.265,1054.18;913.625,1054.18;913.625,1054.02)</value>
    </values>
   </item>
  </items>

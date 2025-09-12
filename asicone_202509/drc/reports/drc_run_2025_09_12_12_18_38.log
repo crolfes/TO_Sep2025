@@ -1,0 +1,78 @@
+12-Sep-2025 21:18:38 | INFO    | KLayout version detected: 0.30.2
+12-Sep-2025 21:18:38 | INFO    | Using DRC JSON file: /opt/ext/OpenPDKs/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/python/sg13g2_pycell_lib/sg13g2_tech_mod.json
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_15_contbar.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_8_gatpoly.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['7_4_pin.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['9_1_lbe.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_9_pad.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['7_3_metalslits.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_7_schottkydiode.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_7_thickgateox.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_1_nwell.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_23_topmetal1filler.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_3_nbulay.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_5_activ.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_20_vian.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_9_copperpillar.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_25_topmetal2.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_6_activfiller.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_2_pwellblock.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_22_topmetal1.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_11_mim.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_10_sealring.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_27_passiv.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_18_metalnfiller.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['7_2_latchup.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_17_metaln.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_16_metal1.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_9_solderbump.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_26_topmetal2filler.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_14_cont.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_9_gatpolyfiller.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['3_2_forbidden.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_19_via1.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['6_1_npnsubstratetie.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_10_psd.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_21_topvia1.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 21:18:38 | INFO    | Generating DRC rule deck using tables: ['5_24_topvia2.drc']
+12-Sep-2025 21:18:38 | INFO    | DRC output will be written to: /home/ckdur/Documents/SymbioticEDA/asicone_sg13g2/chip/signoff/reports
+12-Sep-2025 23:15:44 | ERROR   | ==================================================================================
+12-Sep-2025 23:15:44 | ERROR   | ❌ --- KLayout DRC Check Failed: Violations were detected in the layout. --- ❌
+12-Sep-2025 23:15:44 | ERROR   | ==================================================================================
+12-Sep-2025 23:15:44 | ERROR   | Violated rules are : {'Sdiod.d', 'Sdiod.e'}
+
+12-Sep-2025 23:15:44 | INFO    | Total DRC Run time: 7026.30 seconds (including execution, analysis, and reporting)
