@@ -1,0 +1,19 @@
+magic
+tech ihp-sg13g2
+timestamp 1756455342
+<< metal5 >>
+rect 53 74 873 894
+<< mimcap >>
+rect 113 804 813 834
+rect 113 164 143 804
+rect 783 164 813 804
+rect 113 134 813 164
+<< mimcapcontact >>
+rect 143 164 783 804
+<< metal6 >>
+rect 137 804 789 810
+rect 137 164 143 804
+rect 783 164 789 804
+rect 137 158 789 164
+rect 143 64 783 158
+<< end >>

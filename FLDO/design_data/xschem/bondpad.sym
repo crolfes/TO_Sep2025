@@ -1,0 +1,16 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=primitive
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 7 20 0 40 0 {}
+B 5 37.5 -2.5 42.5 2.5 {name=pad dir=inout}
+P 4 5 20 -20 -20 -20 -20 20 20 20 20 -20 {}
+T {@symname} -21 24 0 0 0.3 0.3 {}
+T {@name} 5 -32 0 0 0.2 0.2 {}
+T {pad} 15 -4 0 1 0.2 0.2 {}

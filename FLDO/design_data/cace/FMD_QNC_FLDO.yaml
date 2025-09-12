@@ -1,0 +1,191 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           FMD_QNC_FLDO
+description:    Linear regulator with 4 bit programming through SPI
+PDK:            ihp-sg13g2
+
+cace_format:    5.2
+
+authorship:
+  designer:      Roel Jordans
+  company:       Eindhoven University of Technology
+  creation_date: September 8th, 2025
+  license:       Apache 2.0
+
+paths:
+  root:          ..
+  schematic:     xschem
+  layout:        gds
+  netlist:       netlist
+  documentation: doc
+
+pins:
+  vcc:
+    description: Positive power supply
+    type: power
+    direction: inout
+    Vmin: 2.5
+    Vmax: 3.3
+  gnd:
+    description: Ground
+    type: ground
+    direction: inout
+    Vmin: -0.3
+    Vmax: 0.3
+  ibias_1u:
+    description: Bias current test output (1uA)
+    type: signal
+    direction: out
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  out:
+    description: Voltage output
+    type: signal
+    direction: out
+  ref:
+    description: Reference voltage input (1.0V)
+    type: signal
+    direction: in
+    Vmin: 0.99
+    Vmax: 1.01
+  en:
+    description: Output enable
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  spi_clk:
+    description: SPI clock
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  spi_mosi:
+    description: SPI MOSI (data in)
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  spi_csb:
+    description: SPI chip select (active low)
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+
+default_conditions:
+  vcc:
+    description: Power supply voltage
+    display: VCC
+    unit: V
+    typical: 3.3
+  gnd:
+    description: Ground
+    display: gnd
+    unit: V
+    typical: 0
+  mos_corner:
+    description: Process corner (mosfets)
+    display: Corner
+    typical: tt
+  passives_corner:
+    description: Process corner (passives)
+    display: Corner
+    typical: typ
+  temp:
+    description: Ambient temperature
+    display: Temperature
+    unit: °C
+    typical: 27
+  en:
+    description: Output enable
+    display: en
+    typical: vcc
+  spi_clk:
+    description: SPI clock
+    display: spi_clk
+    typical: vcc
+  spi_mosi:
+    description: SPI clock
+    display: spi_clk
+    typical: vcc
+  spi_csb:
+    description: SPI clock
+    display: spi_clk
+    typical: vcc
+  ref:
+    description: Reference voltage
+    display: ref
+    unit: V
+    typical: 1.0
+
+parameters:
+
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: any
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_fldo_lvs.tcl
+
+  klayout_drc_maximal:
+    description: KLayout DRC maximal
+    display: KLayout DRC maximal
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            jobs: max
+            args: ['-rd', 'densityRules=false']
+
+  magic_antenna_check:
+    description: Run antenna violation check using magic
+    display: Antenna Checks
+    spec:
+      antenna_violations:
+        maximum:
+          value: 0
+    tool:
+        magic_antenna_check

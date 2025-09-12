@@ -1,0 +1,284 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           ldo_binary
+description:    Linear regulator with 4 bit programming
+PDK:            ihp-sg13g2
+
+cace_format:    5.2
+
+authorship:
+  designer:      Roel Jordans
+  company:       Eindhoven University of Technology
+  creation_date: September 5th, 2025
+  license:       Apache 2.0
+
+paths:
+  root:          ..
+  schematic:     xschem
+  magic:         mag
+  netlist:       netlist
+  documentation: doc
+
+pins:
+  vcc:
+    description: Positive power supply
+    type: power
+    direction: inout
+    Vmin: 2.5
+    Vmax: 3.3
+  gnd:
+    description: Ground
+    type: ground
+    direction: inout
+    Vmin: -0.3
+    Vmax: 0.3
+  ibias_1u:
+    description: Bias current input (1uA)
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  out:
+    description: Voltage output
+    type: signal
+    direction: out
+  ref:
+    description: Reference voltage input (1.0V)
+    type: signal
+    direction: in
+    Vmin: 0.99
+    Vmax: 1.01
+  en_n:
+    description: Output enable, active low
+    type: signal
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+  a[3:0]:
+    description: Programming inputs
+    type: digital
+    direction: in
+    Vmin: gnd - 0.3
+    Vmax: vcc + 0.3
+
+default_conditions:
+  vcc:
+    description: Power supply voltage
+    display: VCC
+    unit: V
+    typical: 3.3
+  gnd:
+    description: Ground
+    display: gnd
+    unit: V
+    typical: 0
+  mos_corner:
+    description: Process corner (mosfets)
+    display: Corner
+    typical: tt
+  passives_corner:
+    description: Process corner (passives)
+    display: Corner
+    typical: typ
+  temp:
+    description: Ambient temperature
+    display: Temperature
+    unit: °C
+    typical: 27
+  en_n:
+    description: Output enable (active low)
+    display: en_n
+    typical: 0
+  a[3:0]:
+    description: Digital programming input
+    display: a[3:0]
+    minimum: 0b0000
+    typical: 0b1000
+    maximum: 0b1111
+  ref:
+    description: Reference voltage
+    display: ref
+    unit: V
+    typical: 1.0
+
+parameters:
+  op_params:
+    spec:
+      vout:
+        display: Output voltage
+        description: Output voltage
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      i_q:
+        display: Current consumption
+        description: Current consumption
+        unit: uA
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: 10
+    tool:
+      ngspice:
+        template: ldo_binary_op.sch
+        format: ascii
+        suffix: .data
+        variables: [vout, i_q]
+        collate: a[3:0]
+        jobs: 8
+    plot:
+      transfer_function:
+        xaxis: a[3:0]
+        yaxis: vout
+    conditions:
+      mos_corner:
+        enumerate: [ss, sf, tt, fs, ff]
+      passives_corner:
+        enumerate: [typ, bcs, wcs]
+      vcc:
+        typical: 3.3
+      temp:
+        minimum: -40
+        typical: 27
+        maximum: 130
+      a[3:0]:
+        minimum: 0
+        maximum: 15
+        step: linear
+        stepsize: 1
+      en_n:
+        typical: 0
+
+  mc_params:
+    spec:
+      vout:
+        display: Output voltage
+        description: Output voltage
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      i_q:
+        display: Current consumption
+        description: Current consumption
+        unit: uA
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: 10
+    tool:
+      ngspice:
+        template: ldo_binary_op.sch
+        format: ascii
+        suffix: .data
+        variables: [vout, i_q]
+        collate: iterations
+        jobs: 8
+    plot:
+      vout_mc:
+        type: histogram
+        xaxis: vout
+        limits: auto
+    conditions:
+      iterations:
+        description: Iterations to run
+        display: Iterations
+        minimum: 1
+        maximum: 50
+        step: linear
+        stepsize: 1 
+      mos_corner:
+        typical: tt_stat
+      passives_corner:
+        typical: typ_stat
+      vcc:
+        typical: 3.3
+      temp:
+        typical: 27
+      a[3:0]:
+        min: 0b0000
+        typical: 0b1000
+        max: 0b1111
+      en_n:
+        typical: 0
+
+
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: any
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_ldo_binary_lvs.tcl
+
+  klayout_drc_maximal:
+    description: KLayout DRC maximal
+    display: KLayout DRC maximal
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            jobs: max
+            args: ['-rd', 'densityRules=false']
+
+  magic_antenna_check:
+    description: Run antenna violation check using magic
+    display: Antenna Checks
+    spec:
+      antenna_violations:
+        maximum:
+          value: 0
+    tool:
+        magic_antenna_check

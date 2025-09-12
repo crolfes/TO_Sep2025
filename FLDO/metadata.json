@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_FLDO",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "FMD_QNC_FLDO",
+    "FinalGdsName": "FMD_QNC_FLDO.gds",
+    "TopCellName": "FMD_QNC_FLDO",
+    "Width": "0.900mm",
+    "Height": "0.900mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}

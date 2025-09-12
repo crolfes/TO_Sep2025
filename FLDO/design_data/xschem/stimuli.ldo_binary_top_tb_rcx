@@ -1,0 +1,94 @@
+
+unit u
+voltage 1.2
+slope 0.01
+format hspice
+
+alias spi_sendbit bit
+  set spi_clk 1
+  set spi_mosi bit
+  s 0.2
+  set spi_clk 0
+  s 0.2
+endalias
+
+alias spi_write bit3 bit2 bit1 bit0
+  set spi_csb 0
+  s 0.1
+
+  spi_sendbit bit3
+  spi_sendbit bit2
+  spi_sendbit bit1
+  spi_sendbit bit0
+
+  s 0.1
+  set spi_clk 1
+  set spi_mosi 1
+  set spi_csb 1
+
+  endalias
+
+beginfile ldo_binary_top.stimuli.cir
+
+set en 0
+set spi_clk 1
+set spi_mosi 1
+set spi_csb 1
+s 1
+set en 1
+s 1
+
+spi_write 1 1 1 1
+s 1
+
+spi_write 0 0 0 0
+s 1
+
+spi_write 0 0 0 1
+s 1
+
+spi_write 0 0 1 0
+s 1
+
+spi_write 0 0 1 1
+s 1
+
+spi_write 0 1 0 0
+s 1
+
+spi_write 0 1 0 1
+s 1
+
+spi_write 0 1 1 1
+s 1
+
+spi_write 1 0 0 0
+s 1
+
+spi_write 1 0 0 1
+s 1
+
+spi_write 1 0 1 0
+s 1
+
+spi_write 1 0 1 1
+s 1
+
+spi_write 1 1 0 0
+s 1
+
+spi_write 1 1 0 1
+s 1
+
+spi_write 1 1 1 0
+s 1
+
+spi_write 1 1 1 1
+s 1
+
+set en 0
+s 2
+
+set en 1
+s 1
+endfile

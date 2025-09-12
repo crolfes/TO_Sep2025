@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>0</priority>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+
+# PCell template
+# This macro template provides the framework for a PCell library
+
+# It is recommended to put PCell code into namespaces.
+# TODO: change the module name
+
+# The PCell declaration
+# Each PCell must provide a declaration. It is recommended to use the PCell name as the class name.
+# TODO: change the class name
+class sg13g2_stdcell_template(pya.PCellDeclarationHelper):
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(sg13g2_stdcell_template, self).__init__()
+
+    # declare the parameters
+    # i.e. self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    #      self.param("s", self.TypeShape, "", default = pya.DPoint(0, 0))
+    self.param("w", self.TypeInt, "Width", default = 3)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return f"stdcell_rails_{self.w}"
+  
+  def coerce_parameters_impl(self):
+    # TODO: use x to access parameter x and set_x to modify its value
+    pass
+  
+  def produce_impl(self):
+    # Constants
+    cellheight = 3780
+    cellpitch  = 480
+    
+    # Layer definitions, can we get them from the PDK?
+    activ      = pya.LayerInfo(  1, 0)
+    cont       = pya.LayerInfo(  6, 0)
+    metal1     = pya.LayerInfo(  8, 0)
+    psd        = pya.LayerInfo( 14, 0)
+    nwell      = pya.LayerInfo( 31, 0)
+    prboundary = pya.LayerInfo(189, 4)
+    
+    self.cell.shapes(prboundary).insert(pya.Box(0, 0, cellpitch*self.w, cellheight))
+    self.cell.shapes(metal1).insert(pya.Box(0, cellheight-220, cellpitch*self.w, cellheight+220))
+    self.cell.shapes(metal1).insert(pya.Box(0, -220, cellpitch*self.w, 220))
+    
+    self.cell.shapes(nwell).insert(pya.Box(-240, 1750, cellpitch*self.w+240, 4170))
+    
+    for i in range (0, self.w):
+      self.cell.shapes(cont).insert(pya.Box(cellpitch*i+160, -80, cellpitch*i+160+160, 80))
+      self.cell.shapes(cont).insert(pya.Box(cellpitch*i+160, cellheight-80, cellpitch*i+160+160, cellheight+80))
+      
+    self.cell.shapes(activ).insert(pya.Box(0, cellheight-150, cellpitch*self.w, cellheight+150))
+    self.cell.shapes(activ).insert(pya.Box(0, -150, cellpitch*self.w, 150))
+    
+    self.cell.shapes(psd).insert(pya.Box(-70, -180, cellpitch*self.w+70, 180))
+    self.cell.shapes(psd).insert(pya.Box(-70, cellheight-180, cellpitch*self.w+70, cellheight+180))
+    
+  # optional:
+  # def can_create_from_shape_impl(self):
+  #   TODO: determine if we have a shape that we can use to derive the 
+  #   PCell parameters from and return true in that case
+  # 
+  # optional:
+  # def parameters_from_shape_impl(self):
+  #   TODO: change parameters using set_x to reflect the parameter for the
+  #   given shape
+  # 
+  # optional:
+  # def transformation_from_shape_impl(self):
+  #   TODO: return a RBA::Trans object for the initial transformation of
+  #   the instance
+  # 
+  # optional:
+  # def wants_lazy_evaluation(self):
+  #   TODO: return "True" here if the PCell takes a long time to compute.
+  #   In lazy mode, the user has to acknowledge parameter changes before 
+  #   they are executed.
+  
+# TODO: add more PCell classes ..
+class sg13g2_guard_ring_p(pya.PCellDeclarationHelper):
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(sg13g2_guard_ring_p, self).__init__()
+
+    # declare the parameters
+    # i.e. self.param("l", self.TypeLayer, "Layer", default = pya.LayerInfo(1, 0))
+    #      self.param("s", self.TypeShape, "", default = pya.DPoint(0, 0))
+    self.param("w", self.TypeInt, "Width", default = 3)
+    self.param("h", self.TypeInt, "Height", default = 3)
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return f"guard_ring_p_{self.w}_{self.h}"
+  
+  def coerce_parameters_impl(self):
+    # TODO: use x to access parameter x and set_x to modify its value
+    pass
+  
+  def produce_impl(self):
+    # Constants
+    cont_pitch = 480
+    cont_size  = 160
+    m1_width   = 260
+    tap_width  = 300
+    psd_width  = 360
+    
+    # Layer definitions, can we get them from the PDK?
+    activ      = pya.LayerInfo(  1, 0)
+    cont       = pya.LayerInfo(  6, 0)
+    metal1     = pya.LayerInfo(  8, 0)
+    psd        = pya.LayerInfo( 14, 0)
+    
+    # calculate extra parameters
+    box_height = (self.h-1) * cont_pitch
+    box_width  = (self.w-1) * cont_pitch
+    
+     
+    self.draw_box(metal1, box_height, box_width, m1_width)
+    self.draw_box(activ,  box_height, box_width, tap_width)
+    self.draw_box(psd,    box_height, box_width, psd_width)
+    
+#    self.cell.shapes(metal1).insert(pya.Box(0, cellheight-220, cellpitch*self.w, cellheight+220))
+#    self.cell.shapes(metal1).insert(pya.Box(0, -220, cellpitch*self.w, 220))
+           
+    for i in range (0, self.w):
+      self.cell.shapes(cont).insert(pya.Box(cont_pitch*i-cont_size/2, -cont_size/2, cont_pitch*i+cont_size/2, cont_size/2))
+      self.cell.shapes(cont).insert(pya.Box(cont_pitch*i-cont_size/2, box_height-cont_size/2, cont_pitch*i+cont_size/2, box_height+cont_size/2))
+      
+    for i in range(1, self.h-1):
+      self.cell.shapes(cont).insert(pya.Box(-cont_size/2, cont_pitch*i-cont_size/2, cont_size/2, cont_pitch*i+cont_size/2))
+      self.cell.shapes(cont).insert(pya.Box(box_width-cont_size/2, cont_pitch*i-cont_size/2, box_width+cont_size/2, cont_pitch*i+cont_size/2))
+
+#    self.cell.shapes(activ).insert(pya.Box(0, cellheight-150, cellpitch*self.w, cellheight+150))
+#    self.cell.shapes(activ).insert(pya.Box(0, -150, cellpitch*self.w, 150))
+    
+#    self.cell.shapes(psd).insert(pya.Box(-70, -180, cellpitch*self.w+70, 180))
+#    self.cell.shapes(psd).insert(pya.Box(-70, cellheight-180, cellpitch*self.w+70, cellheight+180))
+
+  def draw_box(self, layer, width, height, line_width):
+    self.cell.shapes(layer).insert(pya.Box(-line_width/2, -line_width/2, height+line_width/2, line_width/2))
+    self.cell.shapes(layer).insert(pya.Box(-line_width/2, width-line_width/2, height+line_width/2, width+line_width/2))
+    self.cell.shapes(layer).insert(pya.Box(-line_width/2, -line_width/2, line_width/2, width+line_width/2))
+    self.cell.shapes(layer).insert(pya.Box(height-line_width/2, -line_width/2, height+line_width/2, width+line_width/2))
+    
+
+# The PCell library declaration
+# A PCell library must be declared by deriving a custom class from RBA::Library.
+# The main purpose of this class is to provide the PCell declarations and to register itself
+# with a proper name.
+# TODO: change the class name
+class PCellLib(pya.Library):
+
+  def __init__(self):
+  
+    # TODO: change the description
+    self.description = "My PCell library"
+    
+    # register the PCell declarations
+    # TODO: change the names
+    self.layout().register_pcell("sg13g2_stdcell_template", sg13g2_stdcell_template())
+    self.layout().register_pcell("sg13g2_guard_ring_p", sg13g2_guard_ring_p())
+    # TODO: register more PCell declarations
+    
+    # register our library with the name "PCellLib"
+    # TODO: change the library name
+    self.register("PCellLib")
+    
+# instantiate and register the library
+# TODO: change the library name
+PCellLib()
+
+</text>
+</klayout-macro>

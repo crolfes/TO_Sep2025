@@ -1,0 +1,45 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=subcircuit
+format="@spiceprefix@name @pinlist @body @symname W=@W L=@L mult=@mult"
+template="name=R1 n=10 mult=1 W=0.5e-6 L=12e-6 spiceprefix=X"
+default_schematic=ignore
+extra="body"}
+V {}
+S {type=subcircuit
+format="@spiceprefix@name @pinlist @model w=@w l=@l m=@m b=@b"
+template="name=R1
+w=0.5e-6
+l=0.5e-6
+n=1
+model=rhigh
+spiceprefix=X
+b=0
+m=1
+"
+drc="res_drc @name @symname @model @w @l"
+default_schematic=ignore
+}
+F {}
+E {}
+L 4 0 20 0 30 {}
+L 4 0 20 7.5 17.5 {}
+L 4 -7.5 12.5 7.5 17.5 {}
+L 4 -7.5 12.5 7.5 7.5 {}
+L 4 -7.5 2.5 7.5 7.5 {}
+L 4 -7.5 2.5 7.5 -2.5 {}
+L 4 -7.5 -7.5 7.5 -2.5 {}
+L 4 -7.5 -7.5 7.5 -12.5 {}
+L 4 -7.5 -17.5 7.5 -12.5 {}
+L 4 -7.5 -17.5 0 -20 {}
+L 4 0 -30 0 -20 {}
+B 5 -2.5 27.5 2.5 32.5 {name=M dir=inout propag=1 pinnumber=2}
+B 5 -2.5 -32.5 2.5 -27.5 {name=P dir=inout propag=0 pinnumber=1}
+T {w/l = @w / @l} 15 -3.75 0 0 0.2 0.2 {layer=13}
+T {@model series chain ( @n )} 15 -16.25 0 0 0.2 0.2 {}
+T {@spiceprefix@name} 15 -28.75 0 0 0.2 0.2 {}
+T {tcleval(R=[ to_eng [ ev \{ @n * ( 1.6e-4 / @w + 1360.0 * ( (@b + 1)*@l + ( 1.081*( @w - 0.04e-6 ) + 0.18e-6 )*@b ) / ( @w - 0.04e-6 ) ) / @m \} ] ])} 15 30 0 0 0.2 0.2 {layer=13}
+T {} 15 20 0 0 0.2 0.2 {}
+T {b=@b} 15 6.25 0 0 0.2 0.2 {layer=13}
+T {m=@m} 15 16.25 0 0 0.2 0.2 {layer=13}
+T {@body} -22 -2 0 0 0.1 0.1 {layer=1}
