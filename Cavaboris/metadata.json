@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_Cavaboris",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "FMD_QNC_Cavaboris",
+    "FinalGdsName": "FMD_QNC_Cavaboris.gds.gz",
+    "TopCellName": "FMD_QNC_CavaborisTop",
+    "Width": "2.000mm",
+    "Height": "2.000mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
