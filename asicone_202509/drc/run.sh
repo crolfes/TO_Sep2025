@@ -1,0 +1,1 @@
+python3 /opt/ext/OpenPDKs/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/tech/drc/run_drc.py --path=asicone_202508.gds --mp=10 --run_dir=./reports/ --topcell=asicone_202508 --run_mode=flat --density_thr=10 --antenna
