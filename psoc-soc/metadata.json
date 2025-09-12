@@ -4,7 +4,7 @@
   "Technology": "SG13CMOS",
   "Design": {
     "DesignName": "psoc-soc",
-    "FinalGdsName": "FMD_QNC_final_layout.gds.zip",
+    "FinalGdsName": "FMD_QNC_final_layout.gds.gz",
     "TopCellName": "soc_top",
     "Width": "2.11008mm",
     "Height": "1.73406mm",

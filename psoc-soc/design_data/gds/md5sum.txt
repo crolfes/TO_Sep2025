@@ -1,2 +1,2 @@
-8a0ac54f44f386b3e9337ce3be73a2e4  9_manual.gds
-f4e198fcc50337190e2173c24051f1aa  FMD_QNC_final_layout.gds.zip
+8a0ac54f44f386b3e9337ce3be73a2e4  FMD_QNC_final_layout.gds
+730b035e580c2e126710c5ebc7767c78  FMD_QNC_final_layout.gds.gz
