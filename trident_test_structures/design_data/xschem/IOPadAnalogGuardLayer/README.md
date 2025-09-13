@@ -22,6 +22,8 @@ Here is a table summarizing the peak voltage for an HBM event with charging volt
 and series resistance of 330 ohms. The IHP provided IOPadAnalog in these conditions
 result in 2.9V peak.
 
+Warning: the below value should be rechecked, as using parallel transistors, or larger ones with more fingers
+yield a very large difference
 | MOS Clamp sizing \ Input Diodes | 4kV   | 8kV   |
 | x1                              | 4.10V | 3.96V |
 | x2                              | 3.62V | 3.54V |
@@ -34,6 +36,8 @@ I use the non-isolated model, but keep in mind that it may perform worse in real
 
 ## -1500V HBM
 
+Warning: the below value should be rechecked, as using parallel transistors, or larger ones with more fingers
+yield a very large difference
 Here is a table summarizing the peak voltage for an HBM event with charging voltage of -1500V, capacitance of 100pF
 and series resistance of 330 ohms. The IHP provided IOPadAnalog in these conditions
 result in -3.29V peak.

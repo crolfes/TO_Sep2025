@@ -15,7 +15,6 @@ N -600 -0 -440 0 {lab=pad}
 N -440 -0 -440 240 {lab=pad}
 N -360 -240 -320 -240 {lab=#net2}
 N -360 0 -320 -0 {lab=#net3}
-C {clamps_guard_layer.sym} -240 240 0 0 {name=x3}
 C {iopin.sym} -600 80 2 0 {name=p1 lab=VSS}
 C {iopin.sym} -600 -80 2 0 {name=p2 lab=VDD}
 C {iopin.sym} -600 0 2 0 {name=p3 lab=pad
@@ -48,5 +47,6 @@ C {ammeter.sym} -390 0 3 0 {name=Vsec savecurrent=true spice_ignore=0}
 C {ammeter.sym} -390 240 3 0 {name=Vclamps savecurrent=true spice_ignore=0}
 C {ammeter.sym} -350 -80 1 0 {name=Vsec_vdd savecurrent=true spice_ignore=0}
 C {ammeter.sym} -350 80 3 0 {name=Vsec_vss savecurrent=true spice_ignore=0}
-C {first_stage_diodes_4kv_guard_layer.sym} -240 -240 0 0 {name=x2}
 C {secondary_protection_guard_layer.sym} -200 0 0 0 {name=x1}
+C {clamps_guard_layer_x2_what.sym} -240 240 0 0 {name=x3}
+C {first_stage_diodes_8kv_guard_layer.sym} -240 -240 0 0 {name=x2}

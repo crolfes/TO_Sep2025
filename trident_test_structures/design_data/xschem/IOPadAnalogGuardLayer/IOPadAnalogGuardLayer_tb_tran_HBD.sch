@@ -48,7 +48,7 @@ value="
 .include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/spice/sg13g2_io.spi
 .OPTION ABSTOL=0.01f
 .param temp=27
-.ic v(vc)=-1500
+.ic v(vc)=1500
 .control
 save all
 op

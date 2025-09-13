@@ -39,21 +39,21 @@ C {lab_wire.sym} -70 -150 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {sg13g2_pr/diodevdd_4kv.sym} 0 -150 0 0 {name=D5
 model=diodevdd_4kv
-m=1
+m=2
 spiceprefix=X
 }
 C {sg13g2_pr/diodevdd_4kv.sym} 0 -50 0 0 {name=D3
 model=diodevdd_4kv
-m=1
+m=2
 spiceprefix=X
 }
 C {sg13g2_pr/diodevss_4kv.sym} 0 180 0 0 {name=D1
 model=diodevss_4kv
 spiceprefix=X
-m=1
+m=2
 }
 C {/run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/idiodes/idiodevss_4kv.sym} 0 60 0 0 {name=D2
 model=idiodevss_4kv
 spiceprefix=X
-m=1
+m=2
 }
