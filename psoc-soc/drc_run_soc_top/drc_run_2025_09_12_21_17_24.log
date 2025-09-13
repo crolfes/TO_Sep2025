@@ -1,0 +1,13 @@
+12-Sep-2025 23:17:25 | INFO    | KLayout version detected: 0.30.1
+12-Sep-2025 23:17:25 | INFO    | Using DRC JSON file: /home/nq5949/Dokumente/psoc/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/python/sg13g2_pycell_lib/sg13g2_tech_mod.json
+12-Sep-2025 23:17:25 | INFO    | Generating DRC rule deck using tables: ['3_2_forbidden.drc', '5_1_nwell.drc', '5_2_pwellblock.drc', '5_3_nbulay.drc', '5_5_activ.drc', '5_6_activfiller.drc', '5_7_thickgateox.drc', '5_8_gatpoly.drc', '5_9_gatpolyfiller.drc', '5_10_psd.drc', '5_14_cont.drc', '5_15_contbar.drc', '5_16_metal1.drc', '5_17_metaln.drc', '5_18_metalnfiller.drc', '5_19_via1.drc', '5_20_vian.drc', '5_21_topvia1.drc', '5_22_topmetal1.drc', '5_23_topmetal1filler.drc', '5_24_topvia2.drc', '5_25_topmetal2.drc', '5_26_topmetal2filler.drc', '5_27_passiv.drc', '6_1_npnsubstratetie.drc', '6_7_schottkydiode.drc', '6_9_solderbump.drc', '6_9_copperpillar.drc', '6_9_pad.drc', '6_10_sealring.drc', '6_11_mim.drc', '7_2_latchup.drc', '7_3_metalslits.drc', '7_4_pin.drc', '9_1_lbe.drc']
+12-Sep-2025 23:17:25 | INFO    | DRC output will be written to: /home/nq5949/Dokumente/psoc/TO_Sep2025/psoc-soc/drc_run_soc_top
+12-Sep-2025 23:17:25 | INFO    | Running IHP-SG13G2 main checks on design /home/nq5949/Dokumente/psoc/TO_Sep2025/psoc-soc/design_data/gds/FMD_QNC_final_layout.gds, topcell: soc_top
+13-Sep-2025 00:28:23 | INFO    | Running IHP-SG13G2 sg13g2_maximal checks on design /home/nq5949/Dokumente/psoc/TO_Sep2025/psoc-soc/design_data/gds/FMD_QNC_final_layout.gds, topcell: soc_top
+13-Sep-2025 02:01:50 | INFO    | Completed running Sg13g2_maximal checks.
+13-Sep-2025 02:01:50 | ERROR   | ==================================================================================
+13-Sep-2025 02:01:50 | ERROR   | ❌ --- KLayout DRC Check Failed: Violations were detected in the layout. --- ❌
+13-Sep-2025 02:01:50 | ERROR   | ==================================================================================
+13-Sep-2025 02:01:50 | ERROR   | Violated rules are : {'LU.d', 'Pad.fR_M2', 'Cnt.c', 'M2.d', 'Pad.d1R', 'Pad.kR', 'Pad.fR_TM2', 'Pad.fR_TM1', 'Sdiod.d', 'Pad.fR_M5', 'Pad.fR_M4', 'NW.b', 'Pad.fR_M3', 'Sdiod.e', 'LU.d1'}
+
+13-Sep-2025 02:01:50 | INFO    | Total DRC Run time: 9865.37 seconds (including execution, analysis, and reporting)

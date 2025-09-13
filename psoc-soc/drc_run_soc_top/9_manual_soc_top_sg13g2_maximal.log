@@ -1,9 +1,0 @@
-# Logfile created on 2025-09-11 00:52:23 +0200 by logger.rb/v1.5.3
-2025-09-11 00:52:23 +0200: Memory Usage (418204K) : Starting running IHP-SG13G2 Klayout DRC maximum runset on /home/nq5949/Dokumente/psoc/TO_Sep2025/psoc-soc/orfs/flow/results/ihp-sg13g2/soc_top/base/9_manual.gds
-2025-09-11 00:52:23 +0200: Memory Usage (418204K) : Ruby Version for klayout: 3.2.3
-2025-09-11 00:52:24 +0200: Memory Usage (539276K) : Loading database to memory is complete.
-2025-09-11 00:52:24 +0200: Memory Usage (539276K) : IHP-SG13G2 Klayout DRC maximum runset output at: /home/nq5949/Dokumente/psoc/TO_Sep2025/psoc-soc/drc_run_soc_top/9_manual_soc_top_sg13g2_maximal.lyrdb
-2025-09-11 00:52:24 +0200: Memory Usage (539276K) : Evaluate switches.
-2025-09-11 00:52:24 +0200: Memory Usage (539276K) : Klayout will use 1 thread(s)
-2025-09-11 00:52:24 +0200: Memory Usage (539276K) : deep mode is enabled for sg13g2_maximal runset.
-2025-09-11 02:25:16 +0200: Memory Usage (4696452K) : KLayout DRC run for maximum ruleSet completed in 5572.31 seconds
