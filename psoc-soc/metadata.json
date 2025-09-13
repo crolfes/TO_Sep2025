@@ -1,0 +1,14 @@
+{
+  "ProjectName": "System-on-Chip-Lab (PSoC) RISCV SoC Reference Design",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "psoc-soc",
+    "FinalGdsName": "FMD_QNC_final_layout.gds.gz",
+    "TopCellName": "soc_top",
+    "Width": "2.11008mm",
+    "Height": "1.73406mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
