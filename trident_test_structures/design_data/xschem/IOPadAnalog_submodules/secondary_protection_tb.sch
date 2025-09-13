@@ -31,7 +31,6 @@ C {simulator_commands_shown.sym} 40 -430 0 0 {name=SimulatorNGSPICE
 simulator=ngspice
 only_toplevel=false 
 value="
-.include ../clamps.spice
 .OPTION ABSTOL=0.01f
 .param temp=27
 .control
@@ -87,9 +86,10 @@ C {gnd.sym} 520 -470 0 0 {name=l5 lab=GND
 value=1.2}
 C {lab_pin.sym} 860 -510 0 0 {name=p5 sig_type=std_logic lab=guard
 value=1.2}
-C {sg13g2_SecondaryProtection.sym} 1020 -540 0 0 {name=x1}
 C {devices/code_shown.sym} 80 -910 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::SG13G2_MODELS/diodes.lib
+.include ../sg13g2_io.spi
 "}
+C {secondary_protection.sym} 1020 -540 0 0 {name=x1}
