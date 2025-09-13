@@ -1,0 +1,14 @@
+{
+  "ProjectName": "FMD_QNC_ocdcpro_poc",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "FMD_QNC_ocdcpro_poc",
+    "FinalGdsName": "FMD_QNC_ocdcpro_poc.gds",
+    "TopCellName": "FMD_QNC_ocdcpro_poc2",
+    "Width": "2.700mm",
+    "Height": "2.700mm",
+    "NumberOfSamples": "10"
+  },
+  "FinalWaferThickness": "200um"
+}
