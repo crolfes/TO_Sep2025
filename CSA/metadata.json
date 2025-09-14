@@ -5,7 +5,7 @@
   "Design": {
     "DesignName": "CSA",
     "FinalGdsName": "CSA.gds",
-    "TopCellName": "CSA",
+    "TopCellName": "FMD_QNC_top_CSA",
     "Width": "1.050mm",
     "Height": "1.850mm",
     "NumberOfSamples": "20"
