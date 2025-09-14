@@ -4,8 +4,8 @@
   "Technology": "SG13CMOS",
   "Design": {
     "DesignName": "FMD_QNC_trident_esd_teststructures",
-    "FinalGdsName": "FMD_QNC_final_layout.gds",
-    "TopCellName": "FMD_QNC_final_layout",
+    "FinalGdsName": "FMD_QNC_trident_esd_teststructures.gds",
+    "TopCellName": "FMD_QNC_trident_esd_teststructures",
     "Width": "0.65mm",
     "Height": "1.1mm",
     "NumberOfSamples": "10"
