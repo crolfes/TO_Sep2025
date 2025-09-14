@@ -1,0 +1,14 @@
+{
+  "ProjectName": "CSA",
+  "Shuttle": "MPW 0.13µm Sep 2025(T594)",
+  "Technology": "SG13CMOS",
+  "Design": {
+    "DesignName": "CSA",
+    "FinalGdsName": "CSA.gds",
+    "TopCellName": "FMD_QNC_top_CSA",
+    "Width": "1.050mm",
+    "Height": "1.850mm",
+    "NumberOfSamples": "20"
+  },
+  "FinalWaferThickness": "200um"
+}
