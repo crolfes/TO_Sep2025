@@ -1,4 +1,5 @@
-   "DesignName": "picosoc_ac_controller",
+  "Design": {
+    "DesignName": "picosoc_ac_controller",
     "FinalGdsName": "FMD_QNC_final_layout.gds",
     "TopCellName": "top_less_pads",
     "Width": "1.5mm",
