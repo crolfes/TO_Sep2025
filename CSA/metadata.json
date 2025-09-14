@@ -5,7 +5,7 @@
   "Design": {
     "DesignName": "CSA",
     "FinalGdsName": "CSA.gds",
-    "TopCellName": "top",
+    "TopCellName": "CSA",
     "Width": "1.050mm",
     "Height": "1.850mm",
     "NumberOfSamples": "20"
