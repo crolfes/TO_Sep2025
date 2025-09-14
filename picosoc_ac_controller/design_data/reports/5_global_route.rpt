@@ -1,0 +1,595 @@
+
+==========================================================================
+global route report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+global route report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+global route report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 14.68
+
+==========================================================================
+global route report_clock_min_period
+--------------------------------------------------------------------------
+clk period_min = 17.57 fmax = 56.92
+
+==========================================================================
+global route report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+   1.17 source latency u_ac_controller_soc_inst.u_spi_flash_mem.xfer.obuffer[7]$_DFFE_PP_/CLK ^
+  -1.70 target latency u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io0_90$_DFF_N_/CLK ^
+   0.10 clock uncertainty
+   0.00 CRPR
+--------------
+  -0.43 setup skew
+
+
+==========================================================================
+global route report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.20    0.00    0.00    0.00 ^ clk_pad (in)
+                                         clk_pad (net)
+                  0.00    0.00    0.00 ^ sg13g2_IOPadIn_clk_pad_inst/pad (sg13g2_IOPadIn)
+     2    0.15    0.27    0.14    0.14 ^ sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+                                         clk (net)
+                  0.26    0.07    0.21 ^ clkbuf_regs_0_clk/A (sg13g2_buf_16)
+     1    0.02    0.03    0.14    0.35 ^ clkbuf_regs_0_clk/X (sg13g2_buf_16)
+                                         clk_regs (net)
+                  0.03    0.00    0.35 ^ clkbuf_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.07    0.42 ^ clkbuf_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_0_clk_regs (net)
+                  0.03    0.00    0.43 ^ clkbuf_1_0_0_clk_regs/A (sg13g2_buf_16)
+     1    0.04    0.02    0.07    0.49 ^ clkbuf_1_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_0_0_clk_regs (net)
+                  0.03    0.01    0.50 ^ clkbuf_1_0_1_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.57 ^ clkbuf_1_0_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_0_1_clk_regs (net)
+                  0.03    0.01    0.57 ^ clkbuf_2_0_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.03    0.07    0.64 ^ clkbuf_2_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_0_0_clk_regs (net)
+                  0.03    0.01    0.65 ^ clkbuf_2_0_1_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.72 ^ clkbuf_2_0_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_0_1_clk_regs (net)
+                  0.03    0.00    0.73 ^ clkbuf_3_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.80 ^ clkbuf_3_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_3_0_0_clk_regs (net)
+                  0.03    0.01    0.81 ^ clkbuf_4_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.07    0.88 ^ clkbuf_4_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_4_0_0_clk_regs (net)
+                  0.03    0.00    0.88 ^ clkbuf_5_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    0.95 ^ clkbuf_5_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_5_0_0_clk_regs (net)
+                  0.02    0.00    0.95 ^ clkbuf_6_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    1.02 ^ clkbuf_6_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_6_0_0_clk_regs (net)
+                  0.02    0.00    1.02 ^ clkbuf_7_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    1.09 ^ clkbuf_7_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_7_0_0_clk_regs (net)
+                  0.02    0.00    1.09 ^ clkbuf_8_0_0_clk_regs/A (sg13g2_buf_16)
+     5    0.10    0.04    0.08    1.17 ^ clkbuf_8_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_8_0_0_clk_regs (net)
+                  0.04    0.01    1.18 ^ clkbuf_leaf_70_clk_regs/A (sg13g2_buf_16)
+     3    0.01    0.02    0.07    1.25 ^ clkbuf_leaf_70_clk_regs/X (sg13g2_buf_16)
+                                         clknet_leaf_70_clk_regs (net)
+                  0.02    0.00    1.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+     2    0.01    0.03    0.20    1.44 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2] (net)
+                  0.03    0.00    1.44 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_/D (sg13g2_dfrbp_1)
+                                  1.44   data arrival time
+
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock source latency
+     2    0.24    0.00    0.00    0.00 ^ clk_pad (in)
+                                         clk_pad (net)
+                  0.00    0.00    0.00 ^ sg13g2_IOPadIn_clk_pad_inst/pad (sg13g2_IOPadIn)
+     2    0.15    0.27    0.14    0.14 ^ sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+                                         clk (net)
+                  0.26    0.07    0.21 ^ clkbuf_regs_0_clk/A (sg13g2_buf_16)
+     1    0.02    0.03    0.14    0.35 ^ clkbuf_regs_0_clk/X (sg13g2_buf_16)
+                                         clk_regs (net)
+                  0.03    0.00    0.35 ^ clkbuf_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.07    0.42 ^ clkbuf_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_0_clk_regs (net)
+                  0.03    0.00    0.43 ^ clkbuf_1_0_0_clk_regs/A (sg13g2_buf_16)
+     1    0.04    0.02    0.07    0.49 ^ clkbuf_1_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_0_0_clk_regs (net)
+                  0.03    0.01    0.50 ^ clkbuf_1_0_1_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.57 ^ clkbuf_1_0_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_0_1_clk_regs (net)
+                  0.03    0.01    0.57 ^ clkbuf_2_0_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.03    0.07    0.64 ^ clkbuf_2_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_0_0_clk_regs (net)
+                  0.03    0.01    0.65 ^ clkbuf_2_0_1_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.72 ^ clkbuf_2_0_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_0_1_clk_regs (net)
+                  0.03    0.00    0.73 ^ clkbuf_3_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.07    0.80 ^ clkbuf_3_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_3_0_0_clk_regs (net)
+                  0.03    0.01    0.81 ^ clkbuf_4_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.07    0.88 ^ clkbuf_4_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_4_0_0_clk_regs (net)
+                  0.03    0.00    0.88 ^ clkbuf_5_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    0.95 ^ clkbuf_5_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_5_0_0_clk_regs (net)
+                  0.02    0.00    0.95 ^ clkbuf_6_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    1.02 ^ clkbuf_6_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_6_0_0_clk_regs (net)
+                  0.02    0.00    1.02 ^ clkbuf_7_0_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07    1.09 ^ clkbuf_7_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_7_0_0_clk_regs (net)
+                  0.02    0.00    1.09 ^ clkbuf_8_0_0_clk_regs/A (sg13g2_buf_16)
+     5    0.10    0.04    0.08    1.17 ^ clkbuf_8_0_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_8_0_0_clk_regs (net)
+                  0.04    0.01    1.17 ^ clkbuf_leaf_71_clk_regs/A (sg13g2_buf_16)
+     3    0.01    0.02    0.07    1.24 ^ clkbuf_leaf_71_clk_regs/X (sg13g2_buf_16)
+                                         clknet_leaf_71_clk_regs (net)
+                  0.02    0.00    1.24 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_/CLK (sg13g2_dfrbp_1)
+                          0.10    1.34   clock uncertainty
+                          0.00    1.34   clock reconvergence pessimism
+                         -0.04    1.31   library hold time
+                                  1.31   data required time
+-----------------------------------------------------------------------------
+                                  1.31   data required time
+                                 -1.44   data arrival time
+-----------------------------------------------------------------------------
+                                  0.13   slack (MET)
+
+
+
+==========================================================================
+global route report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock source latency
+     2    0.23    0.00    0.00   31.25 v clk_pad (in)
+                                         clk_pad (net)
+                  0.00    0.00   31.25 v sg13g2_IOPadIn_clk_pad_inst/pad (sg13g2_IOPadIn)
+     2    0.15    0.30    0.48   31.73 v sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+                                         clk (net)
+                  0.27    0.07   31.81 v clkbuf_regs_0_clk/A (sg13g2_buf_16)
+     1    0.02    0.03    0.15   31.96 v clkbuf_regs_0_clk/X (sg13g2_buf_16)
+                                         clk_regs (net)
+                  0.03    0.00   31.96 v clkbuf_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.08   32.04 v clkbuf_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_0_clk_regs (net)
+                  0.02    0.00   32.04 v clkbuf_1_1_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.02    0.07   32.11 v clkbuf_1_1_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_1_0_clk_regs (net)
+                  0.03    0.01   32.12 v clkbuf_1_1_1_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.08   32.20 v clkbuf_1_1_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_1_1_clk_regs (net)
+                  0.03    0.00   32.20 v clkbuf_2_2_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.02    0.07   32.28 v clkbuf_2_2_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_2_0_clk_regs (net)
+                  0.03    0.01   32.29 v clkbuf_2_2_1_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.08   32.36 v clkbuf_2_2_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_2_1_clk_regs (net)
+                  0.03    0.00   32.37 v clkbuf_3_4_0_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.08   32.44 v clkbuf_3_4_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_3_4_0_clk_regs (net)
+                  0.03    0.01   32.45 v clkbuf_4_8_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.08   32.53 v clkbuf_4_8_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_4_8_0_clk_regs (net)
+                  0.03    0.00   32.53 v clkbuf_5_16_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.07   32.61 v clkbuf_5_16_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_5_16_0_clk_regs (net)
+                  0.02    0.00   32.61 v clkbuf_6_32_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07   32.68 v clkbuf_6_32_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_6_32_0_clk_regs (net)
+                  0.02    0.00   32.69 v clkbuf_7_65_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07   32.76 v clkbuf_7_65_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_7_65_0_clk_regs (net)
+                  0.02    0.00   32.76 v clkbuf_8_131_0_clk_regs/A (sg13g2_buf_16)
+     4    0.09    0.03    0.08   32.84 v clkbuf_8_131_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_8_131_0_clk_regs (net)
+                  0.03    0.00   32.84 v clkbuf_leaf_11_clk_regs/A (sg13g2_buf_16)
+     3    0.02    0.02    0.07   32.91 v clkbuf_leaf_11_clk_regs/X (sg13g2_buf_16)
+                                         clknet_leaf_11_clk_regs (net)
+                  0.02    0.00   32.91 v _16308__11250/A (sg13g2_inv_1)
+     1    0.00    0.03    0.03   32.95 ^ _16308__11250/Y (sg13g2_inv_1)
+                                         net11250 (net)
+                  0.03    0.00   32.95 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.01    0.04    0.21   33.16 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.04    0.00   33.16 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.11    0.09   33.24 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.11    0.00   33.24 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.12    0.50    0.39   33.64 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.68    0.06   33.70 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.26    1.52   35.22 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   35.22 ^ spi_flash_io3_pad (inout)
+                                 35.22   data arrival time
+
+                         62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (propagated)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -35.22   data arrival time
+-----------------------------------------------------------------------------
+                                 14.68   slack (MET)
+
+
+
+==========================================================================
+global route report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock source latency
+     2    0.23    0.00    0.00   31.25 v clk_pad (in)
+                                         clk_pad (net)
+                  0.00    0.00   31.25 v sg13g2_IOPadIn_clk_pad_inst/pad (sg13g2_IOPadIn)
+     2    0.15    0.30    0.48   31.73 v sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+                                         clk (net)
+                  0.27    0.07   31.81 v clkbuf_regs_0_clk/A (sg13g2_buf_16)
+     1    0.02    0.03    0.15   31.96 v clkbuf_regs_0_clk/X (sg13g2_buf_16)
+                                         clk_regs (net)
+                  0.03    0.00   31.96 v clkbuf_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.08   32.04 v clkbuf_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_0_clk_regs (net)
+                  0.02    0.00   32.04 v clkbuf_1_1_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.02    0.07   32.11 v clkbuf_1_1_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_1_0_clk_regs (net)
+                  0.03    0.01   32.12 v clkbuf_1_1_1_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.08   32.20 v clkbuf_1_1_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_1_1_1_clk_regs (net)
+                  0.03    0.00   32.20 v clkbuf_2_2_0_clk_regs/A (sg13g2_buf_16)
+     1    0.05    0.02    0.07   32.28 v clkbuf_2_2_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_2_0_clk_regs (net)
+                  0.03    0.01   32.29 v clkbuf_2_2_1_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.03    0.08   32.36 v clkbuf_2_2_1_clk_regs/X (sg13g2_buf_16)
+                                         clknet_2_2_1_clk_regs (net)
+                  0.03    0.00   32.37 v clkbuf_3_4_0_clk_regs/A (sg13g2_buf_16)
+     2    0.06    0.03    0.08   32.44 v clkbuf_3_4_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_3_4_0_clk_regs (net)
+                  0.03    0.01   32.45 v clkbuf_4_8_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.08   32.53 v clkbuf_4_8_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_4_8_0_clk_regs (net)
+                  0.03    0.00   32.53 v clkbuf_5_16_0_clk_regs/A (sg13g2_buf_16)
+     2    0.05    0.02    0.07   32.61 v clkbuf_5_16_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_5_16_0_clk_regs (net)
+                  0.02    0.00   32.61 v clkbuf_6_32_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07   32.68 v clkbuf_6_32_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_6_32_0_clk_regs (net)
+                  0.02    0.00   32.69 v clkbuf_7_65_0_clk_regs/A (sg13g2_buf_16)
+     2    0.04    0.02    0.07   32.76 v clkbuf_7_65_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_7_65_0_clk_regs (net)
+                  0.02    0.00   32.76 v clkbuf_8_131_0_clk_regs/A (sg13g2_buf_16)
+     4    0.09    0.03    0.08   32.84 v clkbuf_8_131_0_clk_regs/X (sg13g2_buf_16)
+                                         clknet_8_131_0_clk_regs (net)
+                  0.03    0.00   32.84 v clkbuf_leaf_11_clk_regs/A (sg13g2_buf_16)
+     3    0.02    0.02    0.07   32.91 v clkbuf_leaf_11_clk_regs/X (sg13g2_buf_16)
+                                         clknet_leaf_11_clk_regs (net)
+                  0.02    0.00   32.91 v _16308__11250/A (sg13g2_inv_1)
+     1    0.00    0.03    0.03   32.95 ^ _16308__11250/Y (sg13g2_inv_1)
+                                         net11250 (net)
+                  0.03    0.00   32.95 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.01    0.04    0.21   33.16 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.04    0.00   33.16 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.11    0.09   33.24 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.11    0.00   33.24 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.12    0.50    0.39   33.64 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.68    0.06   33.70 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.26    1.52   35.22 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   35.22 ^ spi_flash_io3_pad (inout)
+                                 35.22   data arrival time
+
+                         62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (propagated)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -35.22   data arrival time
+-----------------------------------------------------------------------------
+                                 14.68   slack (MET)
+
+
+
+==========================================================================
+global route report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad    1.20    1.51   -0.31 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io2_pad_inst/pad    1.20    1.49   -0.29 (VIOLATED)
+sg13g2_IOPadInOut16mA_gpio_2_pad_inst/pad    1.20    1.43   -0.23 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io0_pad_inst/pad    1.20    1.43   -0.23 (VIOLATED)
+sg13g2_IOPadInOut16mA_gpio_1_pad_inst/pad    1.20    1.43   -0.23 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io1_pad_inst/pad    1.20    1.41   -0.21 (VIOLATED)
+
+
+==========================================================================
+global route max_slew_check_slack
+--------------------------------------------------------------------------
+-0.31058311462402344
+
+==========================================================================
+global route max_slew_check_limit
+--------------------------------------------------------------------------
+1.2000000476837158
+
+==========================================================================
+global route max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-0.2588
+
+==========================================================================
+global route max_fanout_check_slack
+--------------------------------------------------------------------------
+0.0
+
+==========================================================================
+global route max_fanout_check_limit
+--------------------------------------------------------------------------
+8.0
+
+==========================================================================
+global route max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+global route max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.14759355783462524
+
+==========================================================================
+global route max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.30000001192092896
+
+==========================================================================
+global route max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.4920
+
+==========================================================================
+global route max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 6
+
+==========================================================================
+global route max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+global route max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+global route setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+global route hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+global route report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io1_90$_DFF_N_
+          (rising edge-triggered flip-flop clocked by clk')
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk_pad (in)
+   0.14    0.14 ^ sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+   0.21    0.35 ^ clkbuf_regs_0_clk/X (sg13g2_buf_16)
+   0.07    0.42 ^ clkbuf_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.49 ^ clkbuf_1_1_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.58 ^ clkbuf_1_1_1_clk_regs/X (sg13g2_buf_16)
+   0.07    0.65 ^ clkbuf_2_2_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.73 ^ clkbuf_2_2_1_clk_regs/X (sg13g2_buf_16)
+   0.08    0.81 ^ clkbuf_3_4_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.89 ^ clkbuf_4_8_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.96 ^ clkbuf_5_16_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.03 ^ clkbuf_6_32_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.10 ^ clkbuf_7_64_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.17 ^ clkbuf_8_129_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.24 ^ clkbuf_leaf_8_clk_regs/X (sg13g2_buf_16)
+   0.00    1.24 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_/CLK (sg13g2_dfrbp_1)
+   0.24    1.48 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_/Q (sg13g2_dfrbp_1)
+   0.40    1.88 ^ _15013_/Y (sg13g2_nor4_2)
+   0.15    2.03 v _15015_/Y (sg13g2_nand2b_2)
+   0.12    2.15 ^ _15019_/Y (sg13g2_nor2_1)
+   0.00    2.16 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io1_90$_DFF_N_/D (sg13g2_dfrbp_1)
+           2.16   data arrival time
+
+  31.25   31.25   clock clk' (rise edge)
+   0.00   31.25   clock source latency
+   0.00   31.25 v clk_pad (in)
+   0.48   31.73 v sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+   0.22   31.96 v clkbuf_regs_0_clk/X (sg13g2_buf_16)
+   0.08   32.04 v clkbuf_0_clk_regs/X (sg13g2_buf_16)
+   0.07   32.11 v clkbuf_1_1_0_clk_regs/X (sg13g2_buf_16)
+   0.09   32.20 v clkbuf_1_1_1_clk_regs/X (sg13g2_buf_16)
+   0.08   32.28 v clkbuf_2_2_0_clk_regs/X (sg13g2_buf_16)
+   0.09   32.36 v clkbuf_2_2_1_clk_regs/X (sg13g2_buf_16)
+   0.08   32.44 v clkbuf_3_4_0_clk_regs/X (sg13g2_buf_16)
+   0.09   32.53 v clkbuf_4_8_0_clk_regs/X (sg13g2_buf_16)
+   0.08   32.61 v clkbuf_5_16_0_clk_regs/X (sg13g2_buf_16)
+   0.08   32.68 v clkbuf_6_32_0_clk_regs/X (sg13g2_buf_16)
+   0.07   32.76 v clkbuf_7_65_0_clk_regs/X (sg13g2_buf_16)
+   0.08   32.84 v clkbuf_8_131_0_clk_regs/X (sg13g2_buf_16)
+   0.08   32.91 v clkbuf_leaf_11_clk_regs/X (sg13g2_buf_16)
+   0.04   32.95 ^ _16308__11252/Y (sg13g2_inv_1)
+   0.00   32.95 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io1_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+  -0.10   32.85   clock uncertainty
+   0.00   32.85   clock reconvergence pessimism
+  -0.13   32.71   library setup time
+          32.71   data required time
+---------------------------------------------------------
+          32.71   data required time
+          -2.16   data arrival time
+---------------------------------------------------------
+          30.56   slack (MET)
+
+
+
+==========================================================================
+global route report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk_pad (in)
+   0.14    0.14 ^ sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+   0.21    0.35 ^ clkbuf_regs_0_clk/X (sg13g2_buf_16)
+   0.07    0.42 ^ clkbuf_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.49 ^ clkbuf_1_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.57 ^ clkbuf_1_0_1_clk_regs/X (sg13g2_buf_16)
+   0.07    0.64 ^ clkbuf_2_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.72 ^ clkbuf_2_0_1_clk_regs/X (sg13g2_buf_16)
+   0.08    0.80 ^ clkbuf_3_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.88 ^ clkbuf_4_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.95 ^ clkbuf_5_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.02 ^ clkbuf_6_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.09 ^ clkbuf_7_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    1.17 ^ clkbuf_8_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    1.25 ^ clkbuf_leaf_70_clk_regs/X (sg13g2_buf_16)
+   0.00    1.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+   0.20    1.44 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[2]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+   0.00    1.44 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_/D (sg13g2_dfrbp_1)
+           1.44   data arrival time
+
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk_pad (in)
+   0.14    0.14 ^ sg13g2_IOPadIn_clk_pad_inst/p2c (sg13g2_IOPadIn)
+   0.21    0.35 ^ clkbuf_regs_0_clk/X (sg13g2_buf_16)
+   0.07    0.42 ^ clkbuf_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.49 ^ clkbuf_1_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.57 ^ clkbuf_1_0_1_clk_regs/X (sg13g2_buf_16)
+   0.07    0.64 ^ clkbuf_2_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.72 ^ clkbuf_2_0_1_clk_regs/X (sg13g2_buf_16)
+   0.08    0.80 ^ clkbuf_3_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    0.88 ^ clkbuf_4_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    0.95 ^ clkbuf_5_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.02 ^ clkbuf_6_0_0_clk_regs/X (sg13g2_buf_16)
+   0.07    1.09 ^ clkbuf_7_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    1.17 ^ clkbuf_8_0_0_clk_regs/X (sg13g2_buf_16)
+   0.08    1.24 ^ clkbuf_leaf_71_clk_regs/X (sg13g2_buf_16)
+   0.00    1.24 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[2]$_DFF_P_/CLK (sg13g2_dfrbp_1)
+   0.10    1.34   clock uncertainty
+   0.00    1.34   clock reconvergence pessimism
+  -0.04    1.31   library hold time
+           1.31   data required time
+---------------------------------------------------------
+           1.31   data required time
+          -1.44   data arrival time
+---------------------------------------------------------
+           0.13   slack (MET)
+
+
+
+==========================================================================
+global route critical path target clock latency max path
+--------------------------------------------------------------------------
+1.2413
+
+==========================================================================
+global route critical path target clock latency min path
+--------------------------------------------------------------------------
+1.2549
+
+==========================================================================
+global route critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+global route critical path delay
+--------------------------------------------------------------------------
+35.2198
+
+==========================================================================
+global route critical path slack
+--------------------------------------------------------------------------
+14.6802
+
+==========================================================================
+global route slack div critical path delay
+--------------------------------------------------------------------------
+41.681668
+
+==========================================================================
+global route report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.03e-03   9.12e-05   1.01e-06   2.12e-03  27.7%
+Combinational          5.59e-04   4.16e-04   1.78e-06   9.77e-04  12.8%
+Clock                  3.27e-03   1.01e-03   1.94e-06   4.29e-03  56.1%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    2.41e-04   1.87e-05   2.19e-08   2.60e-04   3.4%
+----------------------------------------------------------------
+Total                  6.09e-03   1.54e-03   4.75e-06   7.64e-03 100.0%
+                          79.8%      20.2%       0.1%

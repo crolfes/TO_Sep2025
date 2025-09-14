@@ -1,0 +1,339 @@
+
+==========================================================================
+resizer report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+resizer report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+resizer report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 16.40
+
+==========================================================================
+resizer report_clock_min_period
+--------------------------------------------------------------------------
+clk period_min = 16.16 fmax = 61.87
+
+==========================================================================
+resizer report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+     2    0.00    0.02    0.18    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0] (net)
+                  0.02    0.00    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/D (sg13g2_dfrbp_1)
+                                  0.18   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10   clock uncertainty
+                          0.00    0.10   clock reconvergence pessimism
+                                  0.10 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/CLK (sg13g2_dfrbp_1)
+                         -0.04    0.06   library hold time
+                                  0.06   data required time
+-----------------------------------------------------------------------------
+                                  0.06   data required time
+                                 -0.18   data arrival time
+-----------------------------------------------------------------------------
+                                  0.12   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock network delay (ideal)
+                  0.00    0.00   31.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.00    0.03    0.20   31.45 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.03    0.00   31.45 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.12    0.09   31.53 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.12    0.00   31.53 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.11    0.48    0.38   31.91 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.66    0.07   31.98 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.25    1.52   33.50 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   33.50 ^ spi_flash_io3_pad (inout)
+                                 33.50   data arrival time
+
+                  0.00   62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (ideal)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -33.50   data arrival time
+-----------------------------------------------------------------------------
+                                 16.40   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock network delay (ideal)
+                  0.00    0.00   31.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.00    0.03    0.20   31.45 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.03    0.00   31.45 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.12    0.09   31.53 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.12    0.00   31.53 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.11    0.48    0.38   31.91 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.66    0.07   31.98 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.25    1.52   33.50 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   33.50 ^ spi_flash_io3_pad (inout)
+                                 33.50   data arrival time
+
+                  0.00   62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (ideal)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -33.50   data arrival time
+-----------------------------------------------------------------------------
+                                 16.40   slack (MET)
+
+
+
+==========================================================================
+resizer report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad    1.20    1.50   -0.30 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io2_pad_inst/pad    1.20    1.48   -0.28 (VIOLATED)
+sg13g2_IOPadInOut16mA_gpio_2_pad_inst/pad    1.20    1.43   -0.23 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io0_pad_inst/pad    1.20    1.43   -0.23 (VIOLATED)
+sg13g2_IOPadInOut16mA_gpio_1_pad_inst/pad    1.20    1.42   -0.22 (VIOLATED)
+sg13g2_IOPadInOut16mA_spi_flash_io1_pad_inst/pad    1.20    1.41   -0.21 (VIOLATED)
+
+
+==========================================================================
+resizer max_slew_check_slack
+--------------------------------------------------------------------------
+-0.3035426437854767
+
+==========================================================================
+resizer max_slew_check_limit
+--------------------------------------------------------------------------
+1.2000000476837158
+
+==========================================================================
+resizer max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-0.2530
+
+==========================================================================
+resizer max_fanout_check_slack
+--------------------------------------------------------------------------
+0.0
+
+==========================================================================
+resizer max_fanout_check_limit
+--------------------------------------------------------------------------
+8.0
+
+==========================================================================
+resizer max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.14233288168907166
+
+==========================================================================
+resizer max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.30000001192092896
+
+==========================================================================
+resizer max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.4744
+
+==========================================================================
+resizer max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 6
+
+==========================================================================
+resizer max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+resizer max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+resizer setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+resizer hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+resizer report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io2_90$_DFF_N_
+          (rising edge-triggered flip-flop clocked by clk')
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_/CLK (sg13g2_dfrbp_1)
+   0.22    0.22 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.dummy_count[0]$_SDFFE_PN0N_/Q (sg13g2_dfrbp_1)
+   0.35    0.57 ^ _15013_/Y (sg13g2_nor4_2)
+   0.25    0.82 ^ _15021_/X (sg13g2_and3_2)
+   0.00    0.82 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io2_90$_DFF_N_/D (sg13g2_dfrbp_1)
+           0.82   data arrival time
+
+  31.25   31.25   clock clk' (rise edge)
+   0.00   31.25   clock network delay (ideal)
+  -0.10   31.15   clock uncertainty
+   0.00   31.15   clock reconvergence pessimism
+          31.15 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io2_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+  -0.12   31.03   library setup time
+          31.03   data required time
+---------------------------------------------------------
+          31.03   data required time
+          -0.82   data arrival time
+---------------------------------------------------------
+          30.21   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+   0.18    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+   0.00    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/D (sg13g2_dfrbp_1)
+           0.18   data arrival time
+
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.10    0.10   clock uncertainty
+   0.00    0.10   clock reconvergence pessimism
+           0.10 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/CLK (sg13g2_dfrbp_1)
+  -0.04    0.06   library hold time
+           0.06   data required time
+---------------------------------------------------------
+           0.06   data required time
+          -0.18   data arrival time
+---------------------------------------------------------
+           0.12   slack (MET)
+
+
+
+==========================================================================
+resizer critical path target clock latency max path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path target clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path delay
+--------------------------------------------------------------------------
+33.4992
+
+==========================================================================
+resizer critical path slack
+--------------------------------------------------------------------------
+16.4008
+
+==========================================================================
+resizer slack div critical path delay
+--------------------------------------------------------------------------
+48.958781
+
+==========================================================================
+resizer report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.03e-03   8.31e-05   1.01e-06   2.11e-03  61.3%
+Combinational          5.58e-04   3.75e-04   1.78e-06   9.35e-04  27.1%
+Clock                  5.75e-08   2.67e-07   6.30e-11   3.24e-07   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    2.40e-04   1.59e-04   2.19e-08   3.99e-04  11.6%
+----------------------------------------------------------------
+Total                  2.83e-03   6.17e-04   2.81e-06   3.45e-03 100.0%
+                          82.0%      17.9%       0.1%

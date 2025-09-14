@@ -1,0 +1,74 @@
+OpenROAD v2.0-23557-g6ff4ea2d3f 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation top_less_pads (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 78414 rc segments
+[INFO RCX-0439] Coupling Cap extraction top_less_pads ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 42% of 125405 wires extracted
+[INFO RCX-0442] 50% of 125405 wires extracted
+[INFO RCX-0442] 55% of 125405 wires extracted
+[INFO RCX-0442] 91% of 125405 wires extracted
+[INFO RCX-0442] 100% of 125405 wires extracted
+[INFO RCX-0045] Extract 19365 nets, 95680 rsegs, 95680 caps, 148275 ccs
+[INFO RCX-0443] 19359 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Supply voltage   : 1.20e+00 V
+Worstcase voltage: 1.20e+00 V
+Average voltage  : 1.20e+00 V
+Average IR drop  : 3.63e-04 V
+Worstcase IR drop: 6.95e-04 V
+Percentage drop  : 0.06 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+[INFO PSM-0073] Using bump pattern with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with an reduction factor of 3x.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 8.38e-04 V
+Average voltage  : 3.97e-04 V
+Average IR drop  : 3.97e-04 V
+Worstcase IR drop: 8.38e-04 V
+Percentage drop  : 0.07 %
+######################################
+Cell type report:                       Count       Area
+  Macro                                     1   79719.90
+  Input pad                                 4   57600.00
+  Output pad                               10  144000.00
+  Input/output pad                          6   86400.00
+  Power pad                                 4   57600.00
+  Pad spacer                              102  403200.00
+  Fill cell                              8577   22943.09
+  Cover                                    24  117600.00
+  Antenna cell                              1       5.44
+  Other                                 15659  185790.93
+  Clock buffer                           1373   62154.09
+  Timing Repair Buffer                   1446   13118.11
+  Inverter                                264    2035.76
+  Clock inverter                          377    2607.29
+  Sequential cell                        2155  101660.83
+  Multi-Input combinational cell        11963  129771.33
+  Total                                 41966 1466206.77
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 576864 u^2 95% utilization.
+[WARNING GUI-0076] QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+Elapsed time: 0:31.21[h:]min:sec. CPU time: user 23.73 sys 15.63 (126%). Peak memory: 696436KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                          31            680                  N/A

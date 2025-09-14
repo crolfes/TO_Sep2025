@@ -1,0 +1,223 @@
+OpenROAD v2.0-23557-g6ff4ea2d3f 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Cont
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia2
+
+Units:                1000
+Number of layers:     15
+Number of macros:     102
+Number of vias:       328
+Number of viarulegen: 6
+
+[INFO DRT-0150] Reading design.
+
+Design:                   top_less_pads
+Die area:                 ( 0 0 ) ( 1500000 1500000 )
+Number of track patterns: 14
+Number of DEF vias:       0
+Number of components:     17729
+Number of terminals:      22
+Number of snets:          28
+Number of nets:           19339
+
+[INFO DRT-0167] List of default vias:
+  Layer Via2
+    default via: Via2_YX_so
+  Layer Via3
+    default via: Via3_YX_so
+  Layer Via4
+    default via: Via4_YX_so
+  Layer TopVia1
+    default via: TopVia1EWNS
+  Layer TopVia2
+    default via: TopVia2EWNS
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 242.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete GatPoly.
+[INFO DRT-0024]   Complete Cont.
+[INFO DRT-0024]   Complete Metal1.
+[INFO DRT-0024]   Complete Via1.
+[INFO DRT-0024]   Complete Metal2.
+[INFO DRT-0024]   Complete Via2.
+[INFO DRT-0024]   Complete Metal3.
+[INFO DRT-0024]   Complete Via3.
+[INFO DRT-0024]   Complete Metal4.
+[INFO DRT-0024]   Complete Via4.
+[INFO DRT-0024]   Complete Metal5.
+[INFO DRT-0024]   Complete TopVia1.
+[INFO DRT-0024]   Complete TopMetal1.
+[INFO DRT-0024]   Complete TopVia2.
+[INFO DRT-0024]   Complete TopMetal2.
+[INFO DRT-0033] GatPoly shape region query size = 0.
+[INFO DRT-0033] Cont shape region query size = 0.
+[INFO DRT-0033] Metal1 shape region query size = 548274.
+[INFO DRT-0033] Via1 shape region query size = 45267.
+[INFO DRT-0033] Metal2 shape region query size = 16275.
+[INFO DRT-0033] Via2 shape region query size = 16824.
+[INFO DRT-0033] Metal3 shape region query size = 5513.
+[INFO DRT-0033] Via3 shape region query size = 16698.
+[INFO DRT-0033] Metal4 shape region query size = 5869.
+[INFO DRT-0033] Via4 shape region query size = 21018.
+[INFO DRT-0033] Metal5 shape region query size = 3993.
+[INFO DRT-0033] TopVia1 shape region query size = 8356.
+[INFO DRT-0033] TopMetal1 shape region query size = 1792.
+[INFO DRT-0033] TopVia2 shape region query size = 5798.
+[INFO DRT-0033] TopMetal2 shape region query size = 1148.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 945 pins.
+[INFO DRT-0081]   Complete 91 unique inst patterns.
+[INFO DRT-0084]   Complete 8411 groups.
+#scanned instances     = 17729
+#unique  instances     = 166
+#stdCellGenAp          = 3581
+#stdCellValidPlanarAp  = 108
+#stdCellValidViaAp     = 2465
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 56942
+#instTermValidViaApCnt = 0
+#macroGenAp            = 3942
+#macroValidPlanarAp    = 551
+#macroValidViaAp       = 99
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:03:01, elapsed time = 00:00:08, memory = 187.57 (MB), peak = 192.47 (MB)
+global_route -congestion_report_file ./reports/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.4800  line-2-Via Pitch: 0.3650
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4100
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4100
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4100
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 3.4800  line-2-Via Pitch: 0.4100
+[INFO GRT-0003] Macros: 1
+[INFO GRT-0004] Blockages: 3570
+[INFO GRT-0019] Found 1316 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 9
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Vertical            0             0          0.00%
+Metal2     Horizontal     736528        387026          47.45%
+Metal3     Vertical       650000        336350          48.25%
+Metal4     Horizontal     736528        397486          46.03%
+Metal5     Vertical        86528         24232          72.00%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0197] Via related to pin nodes: 90185
+[INFO GRT-0198] Via related Steiner nodes: 2274
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 113843
+[INFO GRT-0112] Final usage 3D: 426926
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2          387026         45825           11.84%             0 /  0 /  0
+Metal3          336350         38412           11.42%             0 /  0 /  0
+Metal4          397486           955            0.24%             0 /  0 /  0
+Metal5           24232           205            0.85%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          1145094         85397            7.46%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 910915 um
+[INFO GRT-0014] Routed nets: 17275
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     19801
+     1000 |     +0.0% |       0 |       0 |             0 |     18801
+     2000 |     +0.0% |       0 |       0 |             0 |     17801
+     3000 |     +0.0% |       0 |       0 |             0 |     16801
+     4000 |     +0.0% |       0 |       0 |             0 |     15801
+     5000 |     +0.0% |       0 |       0 |             0 |     14801
+     6000 |     +0.0% |       0 |       0 |             0 |     13801
+     7000 |     +0.0% |       0 |       0 |             0 |     12801
+     8000 |     +0.0% |       0 |       0 |             0 |     11801
+     9000 |     +0.0% |       0 |       0 |             0 |     10801
+    10000 |     +0.0% |       0 |       0 |             0 |      9801
+    11000 |     +0.0% |       0 |       0 |             0 |      8801
+    12000 |     +0.0% |       0 |       0 |             0 |      7801
+    13000 |     +0.0% |       0 |       0 |             0 |      6801
+    14000 |     +0.0% |       0 |       0 |             0 |      5801
+    15000 |     +0.0% |       0 |       0 |             0 |      4801
+    16000 |     +0.0% |       0 |       0 |             0 |      3801
+    17000 |     +0.0% |       0 |       0 |             0 |      2801
+    18000 |     +0.0% |       0 |       0 |             0 |      1801
+    19000 |     +0.0% |       0 |       0 |             0 |       801
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          559077.9 u
+legalized HPWL         559077.9 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+repair_timing -verbose -setup_margin 0 -repair_tns 100
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          559077.9 u
+legalized HPWL         559077.9 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 15 antenna violations.
+[INFO GRT-0302] Inserted 20 jumpers for 15 nets.
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 391067 u^2 65% utilization.
+[INFO FLW-0007] clock clk period 62.500000
+[INFO FLW-0008] Clock clk period 45.429
+[INFO FLW-0009] Clock clk slack 14.680
+[INFO FLW-0011] Path endpoint path count 4760
+Elapsed time: 0:31.14[h:]min:sec. CPU time: user 221.28 sys 16.22 (762%). Peak memory: 501896KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                           31            490 f7578325532bf35614aa
