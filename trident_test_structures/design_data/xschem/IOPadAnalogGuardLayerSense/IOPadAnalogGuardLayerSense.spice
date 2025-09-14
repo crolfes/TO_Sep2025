@@ -1,0 +1,108 @@
+.subckt IOPadAnalogGuardLayerSense iovss pad_guard iovdd pad core sense core_sense
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B padres:B
+
+*secondary protection
+R1 pad core rppd w=1e-6 l=2e-6 m=1 b=0
+D7 net1 core dantenna l=3.1u w=0.64u
+D1 net2 pad_guard dantenna l=3.1u w=0.64u
+D2 core pad_guard dpantenna l=0.64u w=4.98u
+D3 pad_guard iovdd dpantenna l=0.64u w=4.98u
+D4 pad_guard iovdd dpantenna l=0.64u w=4.98u
+D5 net2 pad_guard dantenna l=3.1u w=0.64u
+R3 sense core_sense rppd w=1e-6 l=2e-6 m=1 b=0
+D6 net1 core_sense dantenna l=3.1u w=0.64u
+D8 core_sense pad_guard dpantenna l=0.64u w=4.98u
+R4 net4 net4 rppd w=1e-6 l=2e-6 m=1 b=0
+R5 net3 net3 rppd w=1e-6 l=2e-6 m=1 b=0
+D11 iovdd iovdd dpantenna l=0.64u w=4.98u
+D12 iovdd iovdd dpantenna l=0.64u w=4.98u
+D9 net2 iovss dantenna l=3.1u w=0.64u
+D10 net2 iovss dantenna l=3.1u w=0.64u
+D13 net1 pad_guard dantenna l=3.1u w=0.64u
+D14 net1 pad_guard dantenna l=3.1u w=0.64u
+D15 pad_guard pad_guard dpantenna l=0.64u w=4.98u
+D16 pad_guard pad_guard dpantenna l=0.64u w=4.98u
+
+R2 iovss net2 ptap1 A=31.2259e-12 P=153.59e-06
+R6 pad_guard net1 ptap1 A=12.3491e-12 P=70.99e-06
+
+* pad_guard_to_vss_sense
+M6 pad net1 pad_guard iovss sg13_hv_nmos w=88u l=600n ng=40 m=1
+R9 pad_guard net1 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+M2 sense net1 pad_guard iovss sg13_hv_nmos w=88u l=600n ng=40 m=1
+
+*pad_guard_to_vdd_sense
+R9 pad_guard net1 rppd w=0.5e-6 l=12.9e-6 m=1 b=0
+M1 sense net1 pad_guard iovdd sg13_hv_pmos w=266.4u l=0.6u ng=20 m=1
+M2 pad net1 pad_guard iovdd sg13_hv_pmos w=266.4u l=0.6u ng=20 m=1
+R1 iovss iovss ptap1 A=67.0344e-12 P=394.32e-06
+
+* guard_vdd_first_stage_esd
+M3 pad_guard net3 iovdd iovdd sg13_hv_pmos w=532.8u l=600n ng=40 m=1
+R4 net3 iovdd rppd w=0.5e-6 l=12.9e-6 m=1 b=0
+D3 iovdd pad_guard iovss diodevdd_4kv m=2
+
+*guard_vss_first_stage_esd
+M4 pad_guard net4 iovss iovss sg13_hv_nmos w=176u l=600n as=80.74 PS=0.2171e-3 pd=0.2717e-3 ng=40 m=1
+R5 iovss net4 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+D4 iovdd pad_guard iovss diodevss_4kv m=2
+
+*R7 iovss iovss ptap1 A=138.788e-12 P=656.4e-06
+
+.ends
+
+** sch_path: /run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/IOPadAnalogGuardLayer/pad_guard_to_vss_first_stage_esd.sch
+.subckt pad_guard_to_vss_first_stage_esd iovss pad_guard iovdd pad
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B
+M6 pad net1 pad_guard iovss sg13_hv_nmos w=176u l=600n ng=40 m=1
+R9 pad_guard net1 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+D1 iovdd pad pad_guard idiodevss_4kv m=2
+.ends
+
+** sch_path: /run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/IOPadAnalogGuardLayerSense/pad_guard_to_vss_first_stage_esd_sense.sch
+.subckt pad_guard_to_vss_first_stage_esd_sense iovss pad_guard iovdd pad sense
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B sense:B
+M6 pad net1 pad_guard iovss sg13_hv_nmos w=88u l=600n ng=40 m=1
+R9 pad_guard net1 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+M2 sense net1 pad_guard iovss sg13_hv_nmos w=88u l=600n ng=40 m=1
+.ends
+
+** sch_path: /run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/IOPadAnalogGuardLayerSense/pad_guard_to_vdd_first_stage_esd_sense.sch
+.subckt pad_guard_to_vdd_first_stage_esd_sense iovss pad_guard iovdd pad sense
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B sense:B
+R9 pad_guard net1 rppd w=0.5e-6 l=12.9e-6 m=1 b=0
+M1 sense net1 pad_guard iovdd sg13_hv_pmos w=266.4u l=0.6u ng=20 m=1
+M2 pad net1 pad_guard iovdd sg13_hv_pmos w=266.4u l=0.6u ng=20 m=1
+R1 iovss iovss ptap1 A=67.0344e-12 P=394.32e-06
+.ends
+
+
+** sch_path: /run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/IOPadAnalogGuardLayerSense/secondary_protection_guard_layer_sense.sch
+.subckt secondary_protection_guard_layer_sense iovdd pad core pad_guard iovss sense core_sense
+*.PININFO iovss:B iovdd:B pad:B pad_guard:B core:B sense:B core_sense:B
+R1 pad core rppd w=1e-6 l=2e-6 m=1 b=0
+D7 net1 core dantenna l=3.1u w=0.64u
+D1 net2 pad_guard dantenna l=3.1u w=0.64u
+D2 core pad_guard dpantenna l=0.64u w=4.98u
+D3 pad_guard iovdd dpantenna l=0.64u w=4.98u
+D4 pad_guard iovdd dpantenna l=0.64u w=4.98u
+D5 net2 pad_guard dantenna l=3.1u w=0.64u
+R3 sense core_sense rppd w=1e-6 l=2e-6 m=1 b=0
+D6 net1 core_sense dantenna l=3.1u w=0.64u
+D8 core_sense pad_guard dpantenna l=0.64u w=4.98u
+R4 net4 net4 rppd w=1e-6 l=2e-6 m=1 b=0
+R5 net3 net3 rppd w=1e-6 l=2e-6 m=1 b=0
+D11 iovdd iovdd dpantenna l=0.64u w=4.98u
+D12 iovdd iovdd dpantenna l=0.64u w=4.98u
+D9 net2 iovss dantenna l=3.1u w=0.64u
+D10 net2 iovss dantenna l=3.1u w=0.64u
+D13 net1 pad_guard dantenna l=3.1u w=0.64u
+D14 net1 pad_guard dantenna l=3.1u w=0.64u
+D15 pad_guard pad_guard dpantenna l=0.64u w=4.98u
+D16 pad_guard pad_guard dpantenna l=0.64u w=4.98u
+
+R2 iovss net2 ptap1 A=31.2259e-12 P=153.59e-06
+R6 pad_guard net1 ptap1 A=12.3491e-12 P=70.99e-06
+
+.ends
+
