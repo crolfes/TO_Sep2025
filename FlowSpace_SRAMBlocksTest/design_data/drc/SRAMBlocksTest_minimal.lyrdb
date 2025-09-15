@@ -2,7 +2,7 @@
 <report-database>
  <description>design rules: sg13g2_minimal | layout cell: SRAMBlocksTest</description>
  <original-file/>
- <generator>drc: script='/home/verhaegs/eda/Chipflow/IHP/FlowSpace/05_SRAM_generator/deps/c4m-pdk-ihpsg13g2/deps/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc'</generator>
+ <generator>drc: script='/home/verhaegs/eda/Chipflow/IHP/FlowSpace/05_SRAM_generator/sramblock_testchip/sg13g2_minimal.lydrc'</generator>
  <top-cell>SRAMBlocksTest</top-cell>
  <tags>
  </tags>
