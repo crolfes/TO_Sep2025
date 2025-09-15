@@ -4,14 +4,11 @@
 + IOPadAnalogGuardLayerSense_pad IOPadAnalogGuardLayerSense_sense
 + hv_nmos_0u3_l045_guarded_drain hv_nmos_0u3_l045_guarded_gate hv_nmos_0u3_l045_guarded_source
 + lv_nmos_w0u15_l0u13_guarded_drain lv_nmos_w0u15_l0u13_guarded_gate lv_nmos_w0u15_l0u13_guarded_source
-+ hv_nmos_w0u15_l10u0_guarded_drain hv_nmos_w0u15_l10u0_guarded_gate hv_nmos_w0u15_10u0_guarded_source
++ hv_nmos_w0u15_l10u0_guarded_drain hv_nmos_w0u15_l10u0_guarded_gate hv_nmos_w0u15_l10u0_guarded_source
 + IOPadAnalog_clamps
 + IOPadAnalog_DCN_DCP_diodes
 + pad_guard_iopad
 
-X24 IOPadAnalogGuardLayerSense_pad bondpad
-X25 IOPadAnalogGuardLayerSense_sense bondpad
-x24 IOPadAnalogGuardLayerSense iovss pad_guard_iopad iovdd IOPadAnalogGuardLayerSense_pad core IOPadAnalogGuardLayerSense_sense core_sense
 
 *.PININFO iovdd:B iovss:B IOPadAnalogGuardLayer:B pad_guard:B IOPadAnalog:B
 X1 iovdd bondpad
@@ -31,16 +28,10 @@ X11 hv_nmos_0u3_l045_guarded_drain bondpad
 X12 hv_nmos_0u3_l045_guarded_gate bondpad
 X13 hv_nmos_0u3_l045_guarded_source bondpad
 
+x14 lv_nmos_w0u15_l0u13_guarded_drain pad_guard lv_nmos_w0u15_l0u13_guarded_gate iovss lv_nmos_w0u15_l0u13_guarded_source lv_nmos_w0u15_l0u13_guarded
 X15 lv_nmos_w0u15_l0u13_guarded_drain bondpad
 X16 lv_nmos_w0u15_l0u13_guarded_gate bondpad
 X17 lv_nmos_w0u15_l0u13_guarded_source bondpad
-x14 lv_nmos_w0u15_l0u13_guarded_drain pad_guard lv_nmos_w0u15_l0u13_guarded_gate iovss lv_nmos_w0u15_l0u13_guarded_source lv_nmos_w0u15_l0u13_guarded
-
-X24 hv_nmos_w0u15_l10u0_guarded_drain bondpad
-X25 hv_nmos_w0u15_l10u0_guarded_gate bondpad
-X26 hv_nmos_w0u15_l10u0_guarded_source bondpad
-x27 hv_nmos_w0u15_l10u0_guarded_drain pad_guard hv_nmos_w0u15_l10u0_guarded_gate iovss hv_nmos_w0u15_l10u0_guarded_source hv_nmos_w0u3_l10u0_guarded
-
 
 x18 iovdd IOPadAnalog_clamps pad_guard iovss clamps
 X19 IOPadAnalog_clamps bondpad
@@ -51,10 +42,59 @@ x20 iovdd IOPadAnalog_DCN_DCP_diodes iovss pad_guard DCP_DCN_diodes
 X22 IOPadAnalog_secondary_protection bondpad
 x23 iovdd IOPadAnalog_secondary_protection net3 pad_guard iovss secondary_protection
 
+X24 hv_nmos_w0u15_l10u0_guarded_drain bondpad
+X25 hv_nmos_w0u15_l10u0_guarded_gate bondpad
+X26 hv_nmos_w0u15_l10u0_guarded_source bondpad
+x27 hv_nmos_w0u15_l10u0_guarded_drain pad_guard hv_nmos_w0u15_l10u0_guarded_gate iovss hv_nmos_w0u15_l10u0_guarded_source hv_nmos_w0u3_l10u0_guarded
+
+X28 IOPadAnalogGuardLayerSense_pad bondpad
+X29 IOPadAnalogGuardLayerSense_sense bondpad
+x30 iovss pad_guard_iopad iovdd IOPadAnalogGuardLayerSense_pad core IOPadAnalogGuardLayerSense_sense core_sense IOPadAnalogGuardLayerSense
+
 **** begin user architecture code
 .include ./sg13g2_io_no_spiceprefix.spice
 *.include '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/spice/sg13g2_io.spi'
-.include '/run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/top/IOPadAnalogGuardLayer.spice'
+.ends
+
+.subckt IOPadAnalogGuardLayer iovss pad_guard iovdd pad padres
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B padres:B
+
+*secondary protection
+R6 pad padres rppd w=1e-6 l=2e-6 m=1 b=0
+D5 pad_guard padres dantenna l=3.1u w=0.64u
+D6 iovss pad_guard dantenna l=3.1u w=0.64u
+D7 padres pad_guard dpantenna l=0.64u w=4.98u
+D8 pad_guard iovdd dpantenna l=0.64u w=4.98u
+*R7 iovss iovss ptap1 A=4.7192e-12 P=2.776e-05
+
+* pad_guard_to_vss
+M1 pad net1 pad_guard iovss sg13_hv_nmos w=176u l=600n ng=40 m=1
+R1 pad_guard net1 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+D1 iovdd pad pad_guard idiodevss_4kv m=2
+
+*pad_guard_to_vdd
+M2 pad net2 pad_guard iovdd sg13_hv_pmos w=532.8u l=600n ng=40 m=1
+R2 net2 pad_guard rppd w=0.5e-6 l=12.9e-6 m=1 b=0
+D2 pad_guard pad iovss diodevdd_4kv m=2
+*R3 iovss iovss ptap1 A=13.40688e-11 P=0.62864e-3
+
+* guard_vdd_first_stage_esd
+M3 pad_guard net3 iovdd iovdd sg13_hv_pmos w=532.8u l=600n ng=40 m=1
+R4 net3 iovdd rppd w=0.5e-6 l=12.9e-6 m=1 b=0
+D3 iovdd pad_guard iovss diodevdd_4kv m=2
+
+*guard_vss_first_stage_esd
+M4 pad_guard net4 iovss iovss sg13_hv_nmos w=176u l=600n as=80.74 PS=0.2171e-3 pd=0.2717e-3 ng=40 m=1
+R5 iovss net4 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+D4 iovdd pad_guard iovss diodevss_4kv m=2
+.ends
+
+** sch_path: /run/host/mainData/cernbox/PhD/TO_Sep2025/trident_test_structures/design_data/xschem/IOPadAnalogGuardLayer/pad_guard_to_vss_first_stage_esd.sch
+.subckt pad_guard_to_vss_first_stage_esd iovss pad_guard iovdd pad
+*.PININFO iovss:B pad_guard:B iovdd:B pad:B
+M6 pad net1 pad_guard iovss sg13_hv_nmos w=176u l=600n ng=40 m=1
+R9 pad_guard net1 rppd w=0.5e-6 l=3.54e-6 m=1 b=0
+D1 iovdd pad pad_guard idiodevss_4kv m=2
 .ends
 
 .subckt hv_nmos_w0u3_l0u45_guarded drain guard gate bulk source
