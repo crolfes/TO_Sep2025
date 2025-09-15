@@ -1,0 +1,18 @@
+Warning: No mapping for purpose 'BLOCKAGE' - layer is ignored (line=42376, cell=, file=6_final.def)
+[INFO] Reporting cells prior to loading DEF ...
+	/home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/gds/sg13g2_stdcell.gds
+	./../../IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_sram/gds/RM_IHPSG13_1P_512x32_c2_bm_bist.gds
+	/home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/gds/sg13g2_io.gds
+	/home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/gds/bondpad_70x70.gds
+[INFO] GDS_ALLOW_EMPTY=RM_IHPSG13_1P_BITKIT_16x2_(CORNER|EDGE_TB|LE_con_corner|LE_con_edge_lr|LE_con_tap_lr|POWER_ramtap|TAP|TAP_LR)
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_EDGE_TB' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_TAP' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_CORNER' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_LE_con_corner' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_POWER_ramtap' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_TAP_LR' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_LE_con_tap_lr' ignored. Matches GDS_ALLOW_EMPTY.
+[WARNING] LEF Cell 'RM_IHPSG13_1P_BITKIT_16x2_LE_con_edge_lr' ignored. Matches GDS_ALLOW_EMPTY.
+[INFO] No orphan cells in the final layout
+[INFO] Merging 'TOP' as child of 'top_less_pads'
+Elapsed time: 0:01.86[h:]min:sec. CPU time: user 1.62 sys 0.19 (97%). Peak memory: 600976KB.

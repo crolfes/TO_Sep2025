@@ -1,0 +1,24 @@
+violation type: Metal Spacing
+	srcs: net:_00100_ net:net11240
+	bbox = (760.3650, 689.5400) - (760.4600, 689.7400) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:_00100_ net:net11240
+	bbox = (760.3650, 689.5400) - (760.4150, 689.7400) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:net10339 net:net10850
+	bbox = (835.7800, 829.7700) - (835.9700, 829.8100) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:net10339 net:net10850
+	bbox = (835.7800, 829.8100) - (835.9700, 829.8450) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:net10339
+	bbox = (835.4900, 830.0450) - (835.7800, 830.2400) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:net10339
+	bbox = (835.3150, 830.0450) - (835.7800, 830.2400) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:u_ac_controller_soc_inst.u_picorv32.count_cycle\[58\] net:u_ac_controller_soc_inst.u_picorv32.count_cycle\[59\]
+	bbox = (1041.0250, 848.3950) - (1041.2150, 848.5000) on Layer Metal2
+violation type: Metal Spacing
+	srcs: net:u_ac_controller_soc_inst.u_picorv32.count_cycle\[58\] net:u_ac_controller_soc_inst.u_picorv32.count_cycle\[59\]
+	bbox = (1041.0250, 848.4150) - (1041.2150, 848.5000) on Layer Metal2

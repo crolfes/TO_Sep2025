@@ -1,0 +1,154 @@
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 16.40
+
+==========================================================================
+global place report_clock_min_period
+--------------------------------------------------------------------------
+clk period_min = 16.14 fmax = 61.97
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+     2    0.00    0.02    0.18    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag[0] (net)
+                  0.02    0.00    0.18 v u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/D (sg13g2_dfrbp_1)
+                                  0.18   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10   clock uncertainty
+                          0.00    0.10   clock reconvergence pessimism
+                                  0.10 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer.xfer_tag_q[0]$_DFF_P_/CLK (sg13g2_dfrbp_1)
+                         -0.04    0.06   library hold time
+                                  0.06   data required time
+-----------------------------------------------------------------------------
+                                  0.06   data required time
+                                 -0.18   data arrival time
+-----------------------------------------------------------------------------
+                                  0.12   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock network delay (ideal)
+                  0.00    0.00   31.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.00    0.03    0.20   31.45 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.03    0.00   31.45 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.12    0.09   31.53 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.12    0.00   31.53 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.11    0.48    0.38   31.91 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.66    0.07   31.98 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.25    1.52   33.50 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   33.50 ^ spi_flash_io3_pad (inout)
+                                 33.50   data arrival time
+
+                  0.00   62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (ideal)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -33.50   data arrival time
+-----------------------------------------------------------------------------
+                                 16.40   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_
+            (rising edge-triggered flip-flop clocked by clk')
+Endpoint: spi_flash_io3_pad (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   31.25   31.25   clock clk' (rise edge)
+                          0.00   31.25   clock network delay (ideal)
+                  0.00    0.00   31.25 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/CLK (sg13g2_dfrbp_1)
+     1    0.00    0.03    0.20   31.45 ^ u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90$_DFF_N_/Q (sg13g2_dfrbp_1)
+                                         u_ac_controller_soc_inst.u_spi_flash_mem.xfer_io3_90 (net)
+                  0.03    0.00   31.45 ^ _25454_/A2 (sg13g2_a21oi_1)
+     1    0.01    0.12    0.09   31.53 v _25454_/Y (sg13g2_a21oi_1)
+                                         _07174_ (net)
+                  0.12    0.00   31.53 v _25456_/A2 (sg13g2_a21oi_2)
+     1    0.11    0.48    0.38   31.91 ^ _25456_/Y (sg13g2_a21oi_2)
+                                         spi_flash_io3_do (net)
+                  0.66    0.07   31.98 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/c2p (sg13g2_IOPadInOut16mA)
+     2    0.33    1.25    1.52   33.50 ^ sg13g2_IOPadInOut16mA_spi_flash_io3_pad_inst/pad (sg13g2_IOPadInOut16mA)
+                                         spi_flash_io3_pad (net)
+                  0.94    0.00   33.50 ^ spi_flash_io3_pad (inout)
+                                 33.50   data arrival time
+
+                  0.00   62.50   62.50   clock clk (rise edge)
+                          0.00   62.50   clock network delay (ideal)
+                         -0.10   62.40   clock uncertainty
+                          0.00   62.40   clock reconvergence pessimism
+                        -12.50   49.90   output external delay
+                                 49.90   data required time
+-----------------------------------------------------------------------------
+                                 49.90   data required time
+                                -33.50   data arrival time
+-----------------------------------------------------------------------------
+                                 16.40   slack (MET)
+
+
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.03e-03   8.29e-05   1.01e-06   2.11e-03  61.3%
+Combinational          5.58e-04   3.75e-04   1.78e-06   9.34e-04  27.1%
+Clock                  5.75e-08   2.67e-07   6.30e-11   3.24e-07   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    2.40e-04   1.59e-04   2.19e-08   3.99e-04  11.6%
+----------------------------------------------------------------
+Total                  2.83e-03   6.16e-04   2.81e-06   3.45e-03 100.0%
+                          82.0%      17.9%       0.1%

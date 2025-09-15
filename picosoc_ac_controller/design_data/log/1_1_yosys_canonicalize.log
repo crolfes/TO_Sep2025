@@ -1,0 +1,40 @@
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/clock_period.txt
+Setting clock period to 62500
+1. Executing Liberty frontend: ./objects/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+2. Executing Liberty frontend: ./objects/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+3. Executing Liberty frontend: ./objects/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+4. Executing Liberty frontend: ./objects/ihp-sg13g2/picosoc_v7/1500x1500_2.25mm2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+5. Executing Verilog-2005 frontend: /home/khalid/OpenROAD-flow-scripts/flow/designs/ihp-sg13g2/picosoc_v7/verilog/top_less_pads.v
+6. Executing Verilog-2005 frontend: /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/cells_clkgate.v
+7. Executing HIERARCHY pass (managing design hierarchy).
+8. Executing AST frontend in derive mode using pre-parsed AST for module `\top_less_pads'.
+8.1. Analyzing design hierarchy..
+8.2. Executing AST frontend in derive mode using pre-parsed AST for module `\ac_controller_soc'.
+8.3. Analyzing design hierarchy..
+8.4. Executing AST frontend in derive mode using pre-parsed AST for module `\cbus_to_uart_bridge'.
+8.5. Executing AST frontend in derive mode using pre-parsed AST for module `\cbus_to_io_controller_bridge'.
+8.6. Executing AST frontend in derive mode using pre-parsed AST for module `\cbus_to_spi_bridge'.
+8.7. Executing AST frontend in derive mode using pre-parsed AST for module `\spimemio'.
+8.8. Executing AST frontend in derive mode using pre-parsed AST for module `\sram_wrapper_512x32'.
+8.9. Executing AST frontend in derive mode using pre-parsed AST for module `\picorv32'.
+8.10. Analyzing design hierarchy..
+8.11. Executing AST frontend in derive mode using pre-parsed AST for module `\spimemio_xfer'.
+8.12. Executing AST frontend in derive mode using pre-parsed AST for module `\RM_IHPSG13_1P_512x32_c2_bm_bist'.
+8.13. Analyzing design hierarchy..
+8.14. Analyzing design hierarchy..
+Warning: Resizing cell port ac_controller_soc.u_spi_flash_mem.addr from 32 bits to 24 bits.
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module spimemio_xfer because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$6c3c09abaa4c18973a3574eb2df2c049d15198d9\picorv32 because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod\sram_wrapper_512x32\MEM_DELAY=1'0 because it contains processes (run 'proc' command first).
+Warning: Ignoring module spimemio because it contains processes (run 'proc' command first).
+Warning: Ignoring module cbus_to_spi_bridge because it contains processes (run 'proc' command first).
+Warning: Ignoring module cbus_to_io_controller_bridge because it contains processes (run 'proc' command first).
+Warning: Ignoring module cbus_to_uart_bridge because it contains processes (run 'proc' command first).
+10. Executing RTLIL backend.
+Warnings: 8 unique messages, 8 total
+End of script. Logfile hash: c1f6304058, CPU: user 0.09s system 0.01s, MEM: 41.12 MB peak
+Yosys 0.55 (git sha1 60f126cd0, g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
+Time spent: 54% 1x hierarchy (0 sec), 16% 4x read_verilog (0 sec), ...
+Elapsed time: 0:00.17[h:]min:sec. CPU time: user 0.13 sys 0.00 (80%). Peak memory: 44352KB.

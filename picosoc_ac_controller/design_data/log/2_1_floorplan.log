@@ -1,0 +1,75 @@
+OpenROAD v2.0-23557-g6ff4ea2d3f 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+[INFO ODB-0227] LEF file: /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/sg13g2_tech.lef, created 19 layers, 300 vias
+[INFO ODB-0227] LEF file: /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/sg13g2_stdcell.lef, created 78 library cells
+[INFO ODB-0227] LEF file: ./../../IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_512x32_c2_bm_bist.lef, created 1 library cells
+[INFO ODB-0227] LEF file: /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/sg13g2_io.lef, created 22 library cells
+[INFO ODB-0227] LEF file: /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/bondpad_70x70.lef, created 1 library cells
+[WARNING ORD-2011] LEF master RM_IHPSG13_1P_512x32_c2_bm_bist has no liberty cell.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 3 input ports missing set_input_delay.
+Warning: There is 1 unconstrained endpoint.
+number instances in verilog is 14212
+[WARNING IFP-0028] Core area lower left (360.000, 360.000) snapped to (360.000, 362.880).
+[INFO IFP-0001] Added 205 rows of 1625 site CoreSite.
+source /home/khalid/OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/make_tracks.tcl
+source /home/khalid/OpenROAD-flow-scripts/flow/designs/ihp-sg13g2/picosoc_v7/pad.tcl
+[INFO PAD-0116] Creating terminal for gpio_1_pad on TopMetal2 at (930.000um, 70.000um) - (1000.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for gpio_2_pad on TopMetal2 at (1073.000um, 70.000um) - (1143.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_io0_pad on TopMetal2 at (70.000um, 643.000um) - (140.000um, 713.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_io1_pad on TopMetal2 at (70.000um, 787.000um) - (140.000um, 857.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_io2_pad on TopMetal2 at (70.000um, 930.000um) - (140.000um, 1000.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_io3_pad on TopMetal2 at (70.000um, 1073.000um) - (140.000um, 1143.000um)
+[INFO PAD-0116] Creating terminal for clk_pad on TopMetal2 at (787.000um, 70.000um) - (857.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for resetn_pad on TopMetal2 at (635.000um, 70.000um) - (705.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for ser_rx_pad on TopMetal2 at (1360.000um, 500.000um) - (1430.000um, 570.000um)
+[INFO PAD-0116] Creating terminal for spi_sensor_miso_pad on TopMetal2 at (1360.000um, 1073.000um) - (1430.000um, 1143.000um)
+[INFO PAD-0116] Creating terminal for pwm_out_pad on TopMetal2 at (635.000um, 1360.000um) - (705.000um, 1430.000um)
+[INFO PAD-0116] Creating terminal for ser_tx_pad on TopMetal2 at (1360.000um, 357.000um) - (1430.000um, 427.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_clk_pad on TopMetal2 at (70.000um, 357.000um) - (140.000um, 427.000um)
+[INFO PAD-0116] Creating terminal for spi_flash_cs_n_pad on TopMetal2 at (70.000um, 500.000um) - (140.000um, 570.000um)
+[INFO PAD-0116] Creating terminal for spi_sensor_clk_pad on TopMetal2 at (1360.000um, 643.000um) - (1430.000um, 713.000um)
+[INFO PAD-0116] Creating terminal for spi_sensor_cs_n_pad on TopMetal2 at (1360.000um, 787.000um) - (1430.000um, 857.000um)
+[INFO PAD-0116] Creating terminal for spi_sensor_mosi_pad on TopMetal2 at (1360.000um, 930.000um) - (1430.000um, 1000.000um)
+[INFO PAD-0116] Creating terminal for x1_pad on TopMetal2 at (787.000um, 1360.000um) - (857.000um, 1430.000um)
+[INFO PAD-0116] Creating terminal for x2_pad on TopMetal2 at (930.000um, 1360.000um) - (1000.000um, 1430.000um)
+[INFO PAD-0116] Creating terminal for x3_pad on TopMetal2 at (1073.000um, 1360.000um) - (1143.000um, 1430.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IO_CORNER_NORTH_WEST_INST.vdd_RING", creating now.
+[INFO PAD-0116] Creating terminal for IO_CORNER_NORTH_WEST_INST.vdd_RING on TopMetal2 at (357.000um, 1360.000um) - (427.000um, 1430.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IO_CORNER_NORTH_WEST_INST.vss_RING", creating now.
+[INFO PAD-0116] Creating terminal for IO_CORNER_NORTH_WEST_INST.vss_RING on TopMetal2 at (488.000um, 1360.000um) - (558.000um, 1430.000um)
+[INFO PAD-0116] Creating terminal for IO_CORNER_NORTH_WEST_INST.vdd_RING on TopMetal2 at (357.000um, 70.000um) - (427.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for IO_CORNER_NORTH_WEST_INST.vss_RING on TopMetal2 at (488.000um, 70.000um) - (558.000um, 140.000um)
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 83 tie sg13g2_tielo instances.
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 2156 tie sg13g2_tiehi instances.
+repair_timing -setup -verbose -setup_margin 0 -sequence unbuffer,sizeup,swap,buffer -repair_tns 100 -skip_last_gasp -match_cell_footprint
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1uA
+ power 1pW
+ distance 1um
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 326776 u^2 54% utilization.
+Elapsed time: 0:06.89[h:]min:sec. CPU time: user 4.37 sys 4.87 (134%). Peak memory: 168388KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      6            164 85dc51770286fbb08a99
